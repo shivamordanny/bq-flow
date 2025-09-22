@@ -111,7 +111,7 @@ graph TB
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/bq-flow.git
+git clone https://github.com/shivamordanny/bq-flow.git
 cd bq-flow
 
 # Install dependencies with Poetry
@@ -252,10 +252,6 @@ curl -X POST http://localhost:8000/api/query \
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgments
 
