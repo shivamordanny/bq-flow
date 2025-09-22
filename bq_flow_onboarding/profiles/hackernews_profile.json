@@ -1,0 +1,217 @@
+{
+  "database_id": "hackernews",
+  "timestamp": "2025-09-21T22:53:04.086509",
+  "sample_size": 1000,
+  "total_columns": 14,
+  "tables_count": 1,
+  "profiles": [
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "title",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'title' from table 'full' in database 'hackernews'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "url",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'url' from table 'full' in database 'hackernews'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "text",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'text' from table 'full' in database 'hackernews'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "dead",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 938,
+      "null_percentage": 93.8,
+      "distinct_count": 1,
+      "example_values": [
+        "True"
+      ],
+      "top_values": {
+        "True": 62
+      },
+      "semantic_context": "Column 'dead' from table 'full' in database 'hackernews'. Data type is STRING. It contains a single constant value. This column is mostly empty with 93.8% null values. Sample values include: \"True\". The most common values are: True."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "by",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'by' from table 'full' in database 'hackernews'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "score",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'score' from table 'full' in database 'hackernews'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "time",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 450,
+      "null_percentage": 45.0,
+      "distinct_count": 548,
+      "min_value": "1199512624.0",
+      "max_value": "1431719031.0",
+      "avg_value": 1414984654.029091,
+      "std_dev": 51297939.5933595,
+      "example_values": [
+        "1199512624.0",
+        "1431002725.25",
+        "1431301649.5",
+        "1431531336.75",
+        "1431719031.0"
+      ],
+      "semantic_context": "Column 'time' from table 'full' in database 'hackernews'. Data type is NUMERIC. It contains 548 distinct values. About 45.0% of values are null. Sample numeric values include: 1199512624.0, 1431002725.25, 1431301649.5, 1431531336.75, 1431719031.0. Values range from 1199512624.0 to 1431719031.0. The average value is 1414984654.03."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "timestamp",
+      "data_type": "DATETIME",
+      "total_count": 1000,
+      "null_count": 450,
+      "null_percentage": 45.0,
+      "distinct_count": 548,
+      "min_value": "2008-01-05 05:57:04+00:00",
+      "max_value": "2015-05-15 19:43:51+00:00",
+      "example_values": [
+        "2008-01-05 05:57:04+00:00",
+        "2015-05-06 01:08:51+00:00",
+        "2015-05-07 07:24:04+00:00",
+        "2015-05-08 02:39:31+00:00",
+        "2015-05-09 21:49:23+00:00",
+        "2015-05-11 16:15:15+00:00",
+        "2015-05-12 18:56:44+00:00",
+        "2015-05-13 21:24:10+00:00",
+        "2015-05-14 22:11:20+00:00",
+        "2015-05-15 19:43:51+00:00"
+      ],
+      "semantic_context": "Column 'timestamp' from table 'full' in database 'hackernews'. Data type is DATETIME. It contains 548 distinct values. About 45.0% of values are null. Sample dates include: 2008-01-05 05:57:04+00:00, 2015-05-06 01:08:51+00:00, 2015-05-07 07:24:04+00:00. Date values range from 2008-01-05 05:57:04+00:00 to 2015-05-15 19:43:51+00:00."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "type",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "example_values": [
+        "story",
+        "pollopt",
+        "job",
+        "poll"
+      ],
+      "top_values": {
+        "story": 994,
+        "pollopt": 4,
+        "job": 1,
+        "poll": 1
+      },
+      "semantic_context": "Column 'type' from table 'full' in database 'hackernews'. Data type is STRING. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample values include: \"story\", \"pollopt\", \"job\", \"poll\". The most common values are: story, pollopt, job. This appears to be a categorical classification field."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "94952",
+      "max_value": "9553160",
+      "avg_value": 8641452.427,
+      "std_dev": 2680525.74440967,
+      "example_values": [
+        "94952.0",
+        "9502653.0",
+        "9518889.0",
+        "9538322.0",
+        "9553160.0"
+      ],
+      "semantic_context": "Column 'id' from table 'full' in database 'hackernews'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample numeric values include: 94952.0, 9502653.0, 9518889.0, 9538322.0, 9553160.0. Values range from 94952 to 9553160. The average value is 8641452.43."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "parent",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'parent' from table 'full' in database 'hackernews'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "descendants",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'descendants' from table 'full' in database 'hackernews'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "ranking",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'ranking' from table 'full' in database 'hackernews'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "hackernews",
+      "table_name": "full",
+      "column_name": "deleted",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'deleted' from table 'full' in database 'hackernews'. Data type is object. This column is mostly empty with 100.0% null values."
+    }
+  ]
+}

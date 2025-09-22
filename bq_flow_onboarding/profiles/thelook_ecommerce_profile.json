@@ -1,0 +1,1693 @@
+{
+  "database_id": "thelook_ecommerce",
+  "timestamp": "2025-09-21T22:56:30.364774",
+  "sample_size": 1000,
+  "total_columns": 75,
+  "tables_count": 8,
+  "profiles": [
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "distribution_centers",
+      "column_name": "id",
+      "data_type": "NUMERIC",
+      "total_count": 10,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 10,
+      "min_value": "1",
+      "max_value": "10",
+      "avg_value": 5.5,
+      "std_dev": 3.0276503540974917,
+      "example_values": [
+        "1.0",
+        "3.25",
+        "5.5",
+        "7.75",
+        "10.0"
+      ],
+      "semantic_context": "Column 'id' from table 'distribution_centers' in database 'thelook_ecommerce'. Data type is NUMERIC. It has moderate cardinality with 10 unique values. This column has no null values. Sample numeric values include: 1.0, 3.25, 5.5, 7.75, 10.0. Values range from 1 to 10. The average value is 5.50."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "distribution_centers",
+      "column_name": "name",
+      "data_type": "STRING",
+      "total_count": 10,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 10,
+      "example_values": [
+        "Mobile AL",
+        "Houston TX",
+        "Philadelphia PA",
+        "Charleston SC",
+        "Port Authority of New York/New Jersey NY/NJ",
+        "Los Angeles CA",
+        "Savannah GA",
+        "New Orleans LA",
+        "Chicago IL",
+        "Memphis TN"
+      ],
+      "top_values": {
+        "Mobile AL": 1,
+        "Houston TX": 1,
+        "Philadelphia PA": 1,
+        "Charleston SC": 1,
+        "Port Authority of New York/New Jersey NY/NJ": 1
+      },
+      "semantic_context": "Column 'name' from table 'distribution_centers' in database 'thelook_ecommerce'. Data type is STRING. It has moderate cardinality with 10 unique values. This column has no null values. Sample values include: \"Mobile AL\", \"Houston TX\", \"Philadelphia PA\", \"Charleston SC\", \"Port Authority of New York/New Jersey NY/NJ\". The most common values are: Mobile AL, Houston TX, Philadelphia PA. This appears to be a name field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "distribution_centers",
+      "column_name": "latitude",
+      "data_type": "NUMERIC",
+      "total_count": 10,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 10,
+      "min_value": "29.7604",
+      "max_value": "41.8369",
+      "avg_value": 34.67931,
+      "std_dev": 4.572665851545342,
+      "example_values": [
+        "29.7604",
+        "31.024975",
+        "33.41665",
+        "38.74185",
+        "41.8369"
+      ],
+      "semantic_context": "Column 'latitude' from table 'distribution_centers' in database 'thelook_ecommerce'. Data type is NUMERIC. It has moderate cardinality with 10 unique values. This column has no null values. Sample numeric values include: 29.7604, 31.024975, 33.41665, 38.74185, 41.8369. Values range from 29.7604 to 41.8369. The average value is 34.68."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "distribution_centers",
+      "column_name": "longitude",
+      "data_type": "NUMERIC",
+      "total_count": 10,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 10,
+      "min_value": "-118.25",
+      "max_value": "-73.7834",
+      "avg_value": -87.93855,
+      "std_dev": 12.722915542197429,
+      "example_values": [
+        "-118.25",
+        "-90.0428",
+        "-87.8639",
+        "-80.22915",
+        "-73.7834"
+      ],
+      "semantic_context": "Column 'longitude' from table 'distribution_centers' in database 'thelook_ecommerce'. Data type is NUMERIC. It has moderate cardinality with 10 unique values. This column has no null values. Sample numeric values include: -118.25, -90.0428, -87.8639, -80.22915, -73.7834. Values range from -118.25 to -73.7834. The average value is -87.94."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "distribution_centers",
+      "column_name": "distribution_center_geom",
+      "data_type": "STRING",
+      "total_count": 10,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 10,
+      "example_values": [
+        "POINT(-88.0431 30.6944)",
+        "POINT(-95.3698 29.7604)",
+        "POINT(-75.1667 39.95)",
+        "POINT(-79.9333 32.7833)",
+        "POINT(-73.7834 40.634)",
+        "POINT(-118.25 34.05)",
+        "POINT(-81.1167 32.0167)",
+        "POINT(-90.0667 29.95)",
+        "POINT(-87.6847 41.8369)",
+        "POINT(-89.9711 35.1174)"
+      ],
+      "top_values": {
+        "POINT(-88.0431 30.6944)": 1,
+        "POINT(-95.3698 29.7604)": 1,
+        "POINT(-75.1667 39.95)": 1,
+        "POINT(-79.9333 32.7833)": 1,
+        "POINT(-73.7834 40.634)": 1
+      },
+      "semantic_context": "Column 'distribution_center_geom' from table 'distribution_centers' in database 'thelook_ecommerce'. Data type is STRING. It has moderate cardinality with 10 unique values. This column has no null values. Sample values include: \"POINT(-88.0431 30.6944)\", \"POINT(-95.3698 29.7604)\", \"POINT(-75.1667 39.95)\", \"POINT(-79.9333 32.7833)\", \"POINT(-73.7834 40.634)\". The most common values are: POINT(-88.0431 30.6944), POINT(-95.3698 29.7604), POINT(-75.1667 39.95)."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "1298311",
+      "max_value": "2422055",
+      "avg_value": 1873600.225,
+      "std_dev": 323026.7583244893,
+      "example_values": [
+        "1298311.0",
+        "1601021.0",
+        "1877852.0",
+        "2151451.25",
+        "2422055.0"
+      ],
+      "semantic_context": "Column 'id' from table 'events' in database 'thelook_ecommerce'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample numeric values include: 1298311.0, 1601021.0, 1877852.0, 2151451.25, 2422055.0. Values range from 1298311 to 2422055. The average value is 1873600.23."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "user_id",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'user_id' from table 'events' in database 'thelook_ecommerce'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "sequence_number",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "min_value": "3",
+      "max_value": "3",
+      "avg_value": 3.0,
+      "std_dev": 0.0,
+      "example_values": [
+        "3.0"
+      ],
+      "semantic_context": "Column 'sequence_number' from table 'events' in database 'thelook_ecommerce'. Data type is NUMERIC. It contains a single constant value. This column has no null values. Sample numeric values include: 3.0. Values range from 3 to 3. The average value is 3.00."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "session_id",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "example_values": [
+        "015ef4f6-05d0-4dd5-80ca-f7dcab1f9253",
+        "f57e68db-b208-40ad-9a1b-a0f69b58689d",
+        "07508c16-abe5-4855-84f0-00aacbffb738",
+        "fa3094a0-277e-4b81-8d59-507dffd8f68c",
+        "a4073e43-015b-4c1e-9471-65e9f97b0a04",
+        "d69f9cc2-e093-4c47-85e2-c33821fcf7ff",
+        "258f62a7-42da-458b-b8ca-1e7540c3ba96",
+        "a49ad592-7049-42b3-8cd1-61dc5b8b12eb",
+        "897ca58d-d98c-421a-b450-d83751253a6d",
+        "34b61426-0cad-421a-8722-25190c21f141"
+      ],
+      "semantic_context": "Column 'session_id' from table 'events' in database 'thelook_ecommerce'. Data type is STRING. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample values include: \"015ef4f6-05d0-4dd5-80ca-f7dcab1f9253\", \"f57e68db-b208-40ad-9a1b-a0f69b58689d\", \"07508c16-abe5-4855-84f0-00aacbffb738\", \"fa3094a0-277e-4b81-8d59-507dffd8f68c\", \"a4073e43-015b-4c1e-9471-65e9f97b0a04\"."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "created_at",
+      "data_type": "DATETIME",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "2019-01-12 01:19:00+00:00",
+      "max_value": "2025-09-11 07:19:00+00:00",
+      "example_values": [
+        "2019-01-12 01:19:00+00:00",
+        "2019-09-18 09:09:00+00:00",
+        "2020-06-07 18:39:00+00:00",
+        "2021-04-05 12:41:00+00:00",
+        "2022-01-15 10:19:00+00:00",
+        "2022-10-04 06:25:00+00:00",
+        "2023-07-06 08:35:00+00:00",
+        "2024-04-02 05:02:00+00:00",
+        "2025-01-29 16:09:00+00:00",
+        "2025-09-11 07:19:00+00:00"
+      ],
+      "semantic_context": "Column 'created_at' from table 'events' in database 'thelook_ecommerce'. Data type is DATETIME. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample dates include: 2019-01-12 01:19:00+00:00, 2019-09-18 09:09:00+00:00, 2020-06-07 18:39:00+00:00. Date values range from 2019-01-12 01:19:00+00:00 to 2025-09-11 07:19:00+00:00. This appears to be a creation or registration timestamp."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "ip_address",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "example_values": [
+        "41.214.242.58",
+        "223.5.205.239",
+        "90.71.68.173",
+        "87.240.168.9",
+        "47.243.128.136",
+        "81.97.101.24",
+        "174.79.237.204",
+        "106.140.138.119",
+        "26.202.30.34",
+        "35.195.58.95"
+      ],
+      "semantic_context": "Column 'ip_address' from table 'events' in database 'thelook_ecommerce'. Data type is STRING. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample values include: \"41.214.242.58\", \"223.5.205.239\", \"90.71.68.173\", \"87.240.168.9\", \"47.243.128.136\"."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "city",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 236,
+      "example_values": [
+        "Seoul",
+        "New York",
+        "Shanghai",
+        "S\u00e3o Paulo",
+        "Beijing",
+        "Tokyo",
+        "Shenzhen",
+        "Berlin",
+        "Fuzhou",
+        "Wenzhou"
+      ],
+      "semantic_context": "Column 'city' from table 'events' in database 'thelook_ecommerce'. Data type is STRING. It contains 236 distinct values. This column has no null values. Sample values include: \"Seoul\", \"New York\", \"Shanghai\", \"S\u00e3o Paulo\", \"Beijing\". This appears to be a geographic location field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "state",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 29,
+      "example_values": [
+        "Beijing",
+        "S\u00e3o Paulo",
+        "New York",
+        "Liaoning",
+        "Seoul",
+        "Jilin",
+        "Inner Mongolia Autonomous Region",
+        "Tokyo",
+        "Andaluc\u00eda",
+        "Heilongjiang"
+      ],
+      "top_values": {
+        "Beijing": 207,
+        "S\u00e3o Paulo": 159,
+        "New York": 130,
+        "Liaoning": 105,
+        "Seoul": 91
+      },
+      "semantic_context": "Column 'state' from table 'events' in database 'thelook_ecommerce'. Data type is STRING. It has moderate cardinality with 29 unique values. This column has no null values. Sample values include: \"Beijing\", \"S\u00e3o Paulo\", \"New York\", \"Liaoning\", \"Seoul\". The most common values are: Beijing, S\u00e3o Paulo, New York. This appears to be a status or state field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "postal_code",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 535,
+      "example_values": [
+        "02675-031",
+        "130021",
+        "10031",
+        "102401",
+        "100193",
+        "116100",
+        "10020",
+        "102676",
+        "100076",
+        "102208"
+      ],
+      "semantic_context": "Column 'postal_code' from table 'events' in database 'thelook_ecommerce'. Data type is STRING. It contains 535 distinct values. This column has no null values. Sample values include: \"02675-031\", \"130021\", \"10031\", \"102401\", \"100193\"."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "browser",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 5,
+      "example_values": [
+        "Chrome",
+        "Safari",
+        "Firefox",
+        "Other",
+        "IE"
+      ],
+      "top_values": {
+        "Chrome": 500,
+        "Safari": 204,
+        "Firefox": 190,
+        "Other": 58,
+        "IE": 48
+      },
+      "semantic_context": "Column 'browser' from table 'events' in database 'thelook_ecommerce'. Data type is STRING. It is a low-cardinality categorical field with 5 unique values. This column has no null values. Sample values include: \"Chrome\", \"Safari\", \"Firefox\", \"Other\", \"IE\". The most common values are: Chrome, Safari, Firefox."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "traffic_source",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 5,
+      "example_values": [
+        "Email",
+        "Adwords",
+        "YouTube",
+        "Facebook",
+        "Organic"
+      ],
+      "top_values": {
+        "Email": 428,
+        "Adwords": 334,
+        "YouTube": 105,
+        "Facebook": 81,
+        "Organic": 52
+      },
+      "semantic_context": "Column 'traffic_source' from table 'events' in database 'thelook_ecommerce'. Data type is STRING. It is a low-cardinality categorical field with 5 unique values. This column has no null values. Sample values include: \"Email\", \"Adwords\", \"YouTube\", \"Facebook\", \"Organic\". The most common values are: Email, Adwords, YouTube."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "uri",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "/cancel"
+      ],
+      "top_values": {
+        "/cancel": 1000
+      },
+      "semantic_context": "Column 'uri' from table 'events' in database 'thelook_ecommerce'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"/cancel\". The most common values are: /cancel."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "events",
+      "column_name": "event_type",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "cancel"
+      ],
+      "top_values": {
+        "cancel": 1000
+      },
+      "semantic_context": "Column 'event_type' from table 'events' in database 'thelook_ecommerce'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"cancel\". The most common values are: cancel. This appears to be a categorical classification field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "819",
+      "max_value": "488591",
+      "avg_value": 238641.736,
+      "std_dev": 147811.97868261006,
+      "example_values": [
+        "819.0",
+        "103307.75",
+        "236743.5",
+        "371914.25",
+        "488591.0"
+      ],
+      "semantic_context": "Column 'id' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample numeric values include: 819.0, 103307.75, 236743.5, 371914.25, 488591.0. Values range from 819 to 488591. The average value is 238641.74."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "product_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 61,
+      "min_value": "13612",
+      "max_value": "29110",
+      "avg_value": 24823.721,
+      "std_dev": 6579.159892573751,
+      "example_values": [
+        "13612.0",
+        "14245.0",
+        "28682.0",
+        "28874.0",
+        "29110.0"
+      ],
+      "semantic_context": "Column 'product_id' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is NUMERIC. It has moderate cardinality with 61 unique values. This column has no null values. Sample numeric values include: 13612.0, 14245.0, 28682.0, 28874.0, 29110.0. Values range from 13612 to 29110. The average value is 24823.72."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "created_at",
+      "data_type": "DATETIME",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 999,
+      "min_value": "2019-06-09 11:26:41+00:00",
+      "max_value": "2025-09-19 01:49:00+00:00",
+      "example_values": [
+        "2019-06-09 11:26:41+00:00",
+        "2020-11-25 05:36:00+00:00",
+        "2021-10-22 05:09:00+00:00",
+        "2022-06-25 15:05:38+00:00",
+        "2023-02-20 10:20:00+00:00",
+        "2023-10-11 03:20:00+00:00",
+        "2024-05-28 13:31:00+00:00",
+        "2024-12-09 12:49:00+00:00",
+        "2025-05-04 08:33:00+00:00",
+        "2025-09-19 01:49:00+00:00"
+      ],
+      "semantic_context": "Column 'created_at' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is DATETIME. It appears to be a high-cardinality identifier with 999 unique values. This column has no null values. Sample dates include: 2019-06-09 11:26:41+00:00, 2020-11-25 05:36:00+00:00, 2021-10-22 05:09:00+00:00. Date values range from 2019-06-09 11:26:41+00:00 to 2025-09-19 01:49:00+00:00. This appears to be a creation or registration timestamp."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "sold_at",
+      "data_type": "DATETIME",
+      "total_count": 1000,
+      "null_count": 631,
+      "null_percentage": 63.1,
+      "distinct_count": 369,
+      "min_value": "2019-07-31 00:52:41+00:00",
+      "max_value": "2025-09-25 05:18:13.764445+00:00",
+      "example_values": [
+        "2019-07-31 00:52:41+00:00",
+        "2021-09-12 08:57:04+00:00",
+        "2022-11-24 01:51:05+00:00",
+        "2023-09-15 08:32:00+00:00",
+        "2024-05-09 04:20:49+00:00",
+        "2024-09-22 05:21:26+00:00",
+        "2025-02-06 03:49:45+00:00",
+        "2025-05-08 23:22:29+00:00",
+        "2025-08-05 03:06:51+00:00",
+        "2025-09-25 05:18:13.764445+00:00"
+      ],
+      "semantic_context": "Column 'sold_at' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is DATETIME. It contains 369 distinct values. This column has many nulls (63.1%). Sample dates include: 2019-07-31 00:52:41+00:00, 2021-09-12 08:57:04+00:00, 2022-11-24 01:51:05+00:00. Date values range from 2019-07-31 00:52:41+00:00 to 2025-09-25 05:18:13.764445+00:00."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "cost",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 60,
+      "min_value": "1.6156799629327656",
+      "max_value": "13.020000010728836",
+      "avg_value": 6.617695686935035,
+      "std_dev": 2.327705436166756,
+      "example_values": [
+        "1.6156799629327656",
+        "5.299919892195538",
+        "6.574099827432633",
+        "7.877999974647538",
+        "13.020000010728836"
+      ],
+      "semantic_context": "Column 'cost' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is NUMERIC. It has moderate cardinality with 60 unique values. This column has no null values. Sample numeric values include: 1.6156799629327656, 5.299919892195538, 6.574099827432633, 7.877999974647538, 13.020000010728836. Values range from 1.6156799629327656 to 13.020000010728836. The average value is 6.62. This appears to be a monetary field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "product_category",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "Accessories"
+      ],
+      "top_values": {
+        "Accessories": 1000
+      },
+      "semantic_context": "Column 'product_category' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"Accessories\". The most common values are: Accessories. This appears to be a categorical classification field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "product_name",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 59,
+      "example_values": [
+        "2 Tone Nerdy Geek Eye Glasses",
+        "1 1/2 In. Original Perry Suspenders",
+        "180s Men's Foundation Glove",
+        "180s Men's Soft Shell Ear Warmer",
+        "100% Genuine Leather Bi-fold Badge Holder Black #2518TA",
+        "180s Men's Tec Fleece Ear Warmer",
+        "180's Men's Metro Ear Warmers - Black",
+        "100% Silk Woven Charcoal Paisley Tie",
+        "100% Silk Woven Brown Paisley Tie",
+        "100% Silk Woven Colorful Gingham Blue and Gray Self-Tie Bow Tie"
+      ],
+      "top_values": {
+        "2 Tone Nerdy Geek Eye Glasses": 37,
+        "1 1/2 In. Original Perry Suspenders": 33,
+        "180s Men's Foundation Glove": 32,
+        "180s Men's Soft Shell Ear Warmer": 29,
+        "100% Genuine Leather Bi-fold Badge Holder Black #2518TA": 27
+      },
+      "semantic_context": "Column 'product_name' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is STRING. It has moderate cardinality with 59 unique values. This column has no null values. Sample values include: \"2 Tone Nerdy Geek Eye Glasses\", \"1 1/2 In. Original Perry Suspenders\", \"180s Men's Foundation Glove\", \"180s Men's Soft Shell Ear Warmer\", \"100% Genuine Leather Bi-fold Badge Holder Black #2518TA\". This appears to be a name field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "product_brand",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 18,
+      "example_values": [
+        "TheTieBar",
+        "180s",
+        "Funny Girl Designs",
+        "Perry",
+        "106Shades",
+        "Marshal",
+        "boxed-gifts",
+        "Private Island",
+        "Belts.com",
+        "Dorfman Pacific"
+      ],
+      "top_values": {
+        "TheTieBar": 417,
+        "180s": 239,
+        "Funny Girl Designs": 57,
+        "Perry": 40,
+        "106Shades": 37
+      },
+      "semantic_context": "Column 'product_brand' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is STRING. It has moderate cardinality with 18 unique values. This column has no null values. Sample values include: \"TheTieBar\", \"180s\", \"Funny Girl Designs\", \"Perry\", \"106Shades\". The most common values are: TheTieBar, 180s, Funny Girl Designs."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "product_retail_price",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 28,
+      "min_value": "4.079999923706056",
+      "max_value": "30.0",
+      "avg_value": 16.31487979698181,
+      "std_dev": 5.40839238873223,
+      "example_values": [
+        "4.079999923706056",
+        "12.949999809265137",
+        "15.989999771118164",
+        "18.989999771118164",
+        "30.0"
+      ],
+      "semantic_context": "Column 'product_retail_price' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is NUMERIC. It has moderate cardinality with 28 unique values. This column has no null values. Sample numeric values include: 4.079999923706056, 12.949999809265137, 15.989999771118164, 18.989999771118164, 30.0. Values range from 4.079999923706056 to 30.0. The average value is 16.31. This appears to be a monetary field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "product_department",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "example_values": [
+        "Men",
+        "Women"
+      ],
+      "top_values": {
+        "Men": 735,
+        "Women": 265
+      },
+      "semantic_context": "Column 'product_department' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is STRING. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample values include: \"Men\", \"Women\". The most common values are: Men, Women."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "product_sku",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 61,
+      "example_values": [
+        "252F6D4524F82B63C027DEF22CED5230",
+        "6B3825881C0F630382026FC43BA12869",
+        "3F5CD3A48812C9FD54FBA7F63D556F3E",
+        "041A20E0E224E50592113FC59F57E1A5",
+        "03FCB1B305029B58D302E2CE53BE9E0F",
+        "AE490CCE121BCB4989BE859BCBDA433A",
+        "9E4C4267803C7E60E916F65A2D0E49CC",
+        "1164CAADA87D881437173E9A15F78AA5",
+        "F902F09C48AAC5FDBDC389271D704DAA",
+        "0676F43BA89EF089F43C6F36CA40FA4A"
+      ],
+      "top_values": {
+        "252F6D4524F82B63C027DEF22CED5230": 33,
+        "6B3825881C0F630382026FC43BA12869": 29,
+        "3F5CD3A48812C9FD54FBA7F63D556F3E": 27,
+        "041A20E0E224E50592113FC59F57E1A5": 27,
+        "03FCB1B305029B58D302E2CE53BE9E0F": 26
+      },
+      "semantic_context": "Column 'product_sku' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is STRING. It has moderate cardinality with 61 unique values. This column has no null values. Sample values include: \"252F6D4524F82B63C027DEF22CED5230\", \"6B3825881C0F630382026FC43BA12869\", \"3F5CD3A48812C9FD54FBA7F63D556F3E\", \"041A20E0E224E50592113FC59F57E1A5\", \"03FCB1B305029B58D302E2CE53BE9E0F\"."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "inventory_items",
+      "column_name": "product_distribution_center_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 9,
+      "min_value": "1",
+      "max_value": "10",
+      "avg_value": 5.398,
+      "std_dev": 2.2866623766583523,
+      "example_values": [
+        "1.0",
+        "3.0",
+        "7.0",
+        "10.0"
+      ],
+      "semantic_context": "Column 'product_distribution_center_id' from table 'inventory_items' in database 'thelook_ecommerce'. Data type is NUMERIC. It is a low-cardinality categorical field with 9 unique values. This column has no null values. Sample numeric values include: 1.0, 3.0, 7.0, 10.0. Values range from 1 to 10. The average value is 5.40."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "order_items",
+      "column_name": "id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "228",
+      "max_value": "180865",
+      "avg_value": 91263.336,
+      "std_dev": 51009.85853792542,
+      "example_values": [
+        "228.0",
+        "47988.25",
+        "90222.5",
+        "134552.5",
+        "180865.0"
+      ],
+      "semantic_context": "Column 'id' from table 'order_items' in database 'thelook_ecommerce'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample numeric values include: 228.0, 47988.25, 90222.5, 134552.5, 180865.0. Values range from 228 to 180865. The average value is 91263.34."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "order_items",
+      "column_name": "order_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 995,
+      "min_value": "160",
+      "max_value": "124988",
+      "avg_value": 63058.578,
+      "std_dev": 35252.78835364123,
+      "example_values": [
+        "160.0",
+        "33151.75",
+        "62346.0",
+        "92925.5",
+        "124988.0"
+      ],
+      "semantic_context": "Column 'order_id' from table 'order_items' in database 'thelook_ecommerce'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 995 unique values. This column has no null values. Sample numeric values include: 160.0, 33151.75, 62346.0, 92925.5, 124988.0. Values range from 160 to 124988. The average value is 63058.58."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "order_items",
+      "column_name": "user_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 989,
+      "min_value": "128",
+      "max_value": "99852",
+      "avg_value": 50430.795,
+      "std_dev": 28146.000261097004,
+      "example_values": [
+        "128.0",
+        "26553.5",
+        "49830.0",
+        "74256.0",
+        "99852.0"
+      ],
+      "semantic_context": "Column 'user_id' from table 'order_items' in database 'thelook_ecommerce'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 989 unique values. This column has no null values. Sample numeric values include: 128.0, 26553.5, 49830.0, 74256.0, 99852.0. Values range from 128 to 99852. The average value is 50430.79."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "order_items",
+      "column_name": "product_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 163,
+      "min_value": "628",
+      "max_value": "29112",
+      "avg_value": 18767.004,
+      "std_dev": 7628.915664509616,
+      "example_values": [
+        "628.0",
+        "13629.0",
+        "15432.0",
+        "28457.0",
+        "29112.0"
+      ],
+      "semantic_context": "Column 'product_id' from table 'order_items' in database 'thelook_ecommerce'. Data type is NUMERIC. It contains 163 distinct values. This column has no null values. Sample numeric values include: 628.0, 13629.0, 15432.0, 28457.0, 29112.0. Values range from 628 to 29112. The average value is 18767.00."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "order_items",
+      "column_name": "inventory_item_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "628",
+      "max_value": "488471",
+      "avg_value": 246474.69,
+      "std_dev": 137779.4708909019,
+      "example_values": [
+        "628.0",
+        "129594.25",
+        "243590.0",
+        "363405.5",
+        "488471.0"
+      ],
+      "semantic_context": "Column 'inventory_item_id' from table 'order_items' in database 'thelook_ecommerce'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample numeric values include: 628.0, 129594.25, 243590.0, 363405.5, 488471.0. Values range from 628 to 488471. The average value is 246474.69."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "order_items",
+      "column_name": "status",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 5,
+      "example_values": [
+        "Shipped",
+        "Complete",
+        "Processing",
+        "Cancelled",
+        "Returned"
+      ],
+      "top_values": {
+        "Shipped": 301,
+        "Complete": 235,
+        "Processing": 208,
+        "Cancelled": 144,
+        "Returned": 112
+      },
+      "semantic_context": "Column 'status' from table 'order_items' in database 'thelook_ecommerce'. Data type is STRING. It is a low-cardinality categorical field with 5 unique values. This column has no null values. Sample values include: \"Shipped\", \"Complete\", \"Processing\", \"Cancelled\", \"Returned\". The most common values are: Shipped, Complete, Processing. This appears to be a status or state field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "order_items",
+      "column_name": "created_at",
+      "data_type": "DATETIME",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "2019-07-23 04:40:19+00:00",
+      "max_value": "2025-09-25 16:57:30.978860+00:00",
+      "example_values": [
+        "2019-07-23 04:40:19+00:00",
+        "2022-01-24 03:13:37+00:00",
+        "2023-03-02 08:28:47+00:00",
+        "2023-10-24 23:13:33+00:00",
+        "2024-05-20 09:59:17+00:00",
+        "2024-10-22 21:36:40+00:00",
+        "2025-02-25 23:01:42+00:00",
+        "2025-06-05 09:01:46+00:00",
+        "2025-08-15 23:09:24+00:00",
+        "2025-09-25 16:57:30.978860+00:00"
+      ],
+      "semantic_context": "Column 'created_at' from table 'order_items' in database 'thelook_ecommerce'. Data type is DATETIME. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample dates include: 2019-07-23 04:40:19+00:00, 2022-01-24 03:13:37+00:00, 2023-03-02 08:28:47+00:00. Date values range from 2019-07-23 04:40:19+00:00 to 2025-09-25 16:57:30.978860+00:00. This appears to be a creation or registration timestamp."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "order_items",
+      "column_name": "shipped_at",
+      "data_type": "DATETIME",
+      "total_count": 1000,
+      "null_count": 352,
+      "null_percentage": 35.199999999999996,
+      "distinct_count": 646,
+      "min_value": "2019-07-23 19:58:00+00:00",
+      "max_value": "2025-09-24 02:15:26.353473+00:00",
+      "example_values": [
+        "2019-07-23 19:58:00+00:00",
+        "2022-01-04 09:59:00+00:00",
+        "2023-02-23 11:24:00+00:00",
+        "2023-10-15 20:16:00+00:00",
+        "2024-04-27 13:31:00+00:00",
+        "2024-11-03 23:58:00+00:00",
+        "2025-02-28 23:21:00+00:00",
+        "2025-06-11 03:58:00+00:00",
+        "2025-08-18 11:41:00+00:00",
+        "2025-09-24 02:15:26.353473+00:00"
+      ],
+      "semantic_context": "Column 'shipped_at' from table 'order_items' in database 'thelook_ecommerce'. Data type is DATETIME. It contains 646 distinct values. About 35.2% of values are null. Sample dates include: 2019-07-23 19:58:00+00:00, 2022-01-04 09:59:00+00:00, 2023-02-23 11:24:00+00:00. Date values range from 2019-07-23 19:58:00+00:00 to 2025-09-24 02:15:26.353473+00:00."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "order_items",
+      "column_name": "delivered_at",
+      "data_type": "DATETIME",
+      "total_count": 1000,
+      "null_count": 653,
+      "null_percentage": 65.3,
+      "distinct_count": 345,
+      "min_value": "2019-07-29 20:19:00+00:00",
+      "max_value": "2025-09-26 07:57:39.151525+00:00",
+      "example_values": [
+        "2019-07-29 20:19:00+00:00",
+        "2022-01-28 21:04:00+00:00",
+        "2023-05-22 01:25:00+00:00",
+        "2023-12-09 13:57:00+00:00",
+        "2024-07-02 07:12:00+00:00",
+        "2024-12-20 08:50:00+00:00",
+        "2025-03-27 02:48:00+00:00",
+        "2025-06-24 10:34:00+00:00",
+        "2025-08-22 00:17:00+00:00",
+        "2025-09-26 07:57:39.151525+00:00"
+      ],
+      "semantic_context": "Column 'delivered_at' from table 'order_items' in database 'thelook_ecommerce'. Data type is DATETIME. It contains 345 distinct values. This column has many nulls (65.3%). Sample dates include: 2019-07-29 20:19:00+00:00, 2022-01-28 21:04:00+00:00, 2023-05-22 01:25:00+00:00. Date values range from 2019-07-29 20:19:00+00:00 to 2025-09-26 07:57:39.151525+00:00."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "order_items",
+      "column_name": "returned_at",
+      "data_type": "DATETIME",
+      "total_count": 1000,
+      "null_count": 888,
+      "null_percentage": 88.8,
+      "distinct_count": 112,
+      "min_value": "2020-02-23 07:38:00+00:00",
+      "max_value": "2025-09-26 03:46:00+00:00",
+      "example_values": [
+        "2020-02-23 07:38:00+00:00",
+        "2022-03-29 21:39:00+00:00",
+        "2023-03-31 20:22:00+00:00",
+        "2023-10-20 08:41:00+00:00",
+        "2024-05-16 18:52:00+00:00",
+        "2024-09-20 15:21:00+00:00",
+        "2025-03-18 11:28:00+00:00",
+        "2025-06-04 02:57:00+00:00",
+        "2025-08-07 01:14:00+00:00",
+        "2025-09-26 03:46:00+00:00"
+      ],
+      "semantic_context": "Column 'returned_at' from table 'order_items' in database 'thelook_ecommerce'. Data type is DATETIME. It contains 112 distinct values. This column has many nulls (88.8%). Sample dates include: 2020-02-23 07:38:00+00:00, 2022-03-29 21:39:00+00:00, 2023-03-31 20:22:00+00:00. Date values range from 2020-02-23 07:38:00+00:00 to 2025-09-26 03:46:00+00:00."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "order_items",
+      "column_name": "sale_price",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 69,
+      "min_value": "0.0199999995529651",
+      "max_value": "5.1599998474121085",
+      "avg_value": 3.831229976847768,
+      "std_dev": 1.0023892841626842,
+      "example_values": [
+        "0.0199999995529651",
+        "3.0899999141693115",
+        "3.990000009536743",
+        "4.84250009059906",
+        "5.1599998474121085"
+      ],
+      "semantic_context": "Column 'sale_price' from table 'order_items' in database 'thelook_ecommerce'. Data type is NUMERIC. It has moderate cardinality with 69 unique values. This column has no null values. Sample numeric values include: 0.0199999995529651, 3.0899999141693115, 3.990000009536743, 4.84250009059906, 5.1599998474121085. Values range from 0.0199999995529651 to 5.1599998474121085. The average value is 3.83. This appears to be a monetary field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "orders",
+      "column_name": "order_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "4",
+      "max_value": "13716",
+      "avg_value": 6774.111,
+      "std_dev": 3997.6707831397734,
+      "example_values": [
+        "4.0",
+        "3033.0",
+        "6813.0",
+        "10254.25",
+        "13716.0"
+      ],
+      "semantic_context": "Column 'order_id' from table 'orders' in database 'thelook_ecommerce'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample numeric values include: 4.0, 3033.0, 6813.0, 10254.25, 13716.0. Values range from 4 to 13716. The average value is 6774.11."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "orders",
+      "column_name": "user_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 933,
+      "min_value": "5",
+      "max_value": "11044",
+      "avg_value": 5472.753,
+      "std_dev": 3234.8139354819446,
+      "example_values": [
+        "5.0",
+        "2449.25",
+        "5518.5",
+        "8295.5",
+        "11044.0"
+      ],
+      "semantic_context": "Column 'user_id' from table 'orders' in database 'thelook_ecommerce'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 933 unique values. This column has no null values. Sample numeric values include: 5.0, 2449.25, 5518.5, 8295.5, 11044.0. Values range from 5 to 11044. The average value is 5472.75."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "orders",
+      "column_name": "status",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "Cancelled"
+      ],
+      "top_values": {
+        "Cancelled": 1000
+      },
+      "semantic_context": "Column 'status' from table 'orders' in database 'thelook_ecommerce'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"Cancelled\". The most common values are: Cancelled. This appears to be a status or state field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "orders",
+      "column_name": "gender",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "F"
+      ],
+      "top_values": {
+        "F": 1000
+      },
+      "semantic_context": "Column 'gender' from table 'orders' in database 'thelook_ecommerce'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"F\". The most common values are: F."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "orders",
+      "column_name": "created_at",
+      "data_type": "DATETIME",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 998,
+      "min_value": "2019-07-28 16:11:00+00:00",
+      "max_value": "2025-09-21 18:53:36.129182+00:00",
+      "example_values": [
+        "2019-07-28 16:11:00+00:00",
+        "2022-03-10 01:38:00+00:00",
+        "2023-02-05 05:23:00+00:00",
+        "2023-10-18 05:55:00+00:00",
+        "2024-04-14 16:07:00+00:00",
+        "2024-10-02 04:18:00+00:00",
+        "2025-02-16 13:37:00+00:00",
+        "2025-05-20 04:21:00+00:00",
+        "2025-08-01 15:37:00+00:00",
+        "2025-09-21 18:53:36.129182+00:00"
+      ],
+      "semantic_context": "Column 'created_at' from table 'orders' in database 'thelook_ecommerce'. Data type is DATETIME. It appears to be a high-cardinality identifier with 998 unique values. This column has no null values. Sample dates include: 2019-07-28 16:11:00+00:00, 2022-03-10 01:38:00+00:00, 2023-02-05 05:23:00+00:00. Date values range from 2019-07-28 16:11:00+00:00 to 2025-09-21 18:53:36.129182+00:00. This appears to be a creation or registration timestamp."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "orders",
+      "column_name": "returned_at",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'returned_at' from table 'orders' in database 'thelook_ecommerce'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "orders",
+      "column_name": "shipped_at",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'shipped_at' from table 'orders' in database 'thelook_ecommerce'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "orders",
+      "column_name": "delivered_at",
+      "data_type": "object",
+      "total_count": 1000,
+      "null_count": 1000,
+      "null_percentage": 100.0,
+      "distinct_count": 0,
+      "semantic_context": "Column 'delivered_at' from table 'orders' in database 'thelook_ecommerce'. Data type is object. This column is mostly empty with 100.0% null values."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "orders",
+      "column_name": "num_of_item",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "min_value": "1",
+      "max_value": "4",
+      "avg_value": 1.462,
+      "std_dev": 0.8314128019505396,
+      "example_values": [
+        "1.0",
+        "2.0",
+        "4.0"
+      ],
+      "semantic_context": "Column 'num_of_item' from table 'orders' in database 'thelook_ecommerce'. Data type is NUMERIC. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample numeric values include: 1.0, 2.0, 4.0. Values range from 1 to 4. The average value is 1.46."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "products",
+      "column_name": "id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "1",
+      "max_value": "29099",
+      "avg_value": 13673.329,
+      "std_dev": 9049.14328237231,
+      "example_values": [
+        "1.0",
+        "5386.25",
+        "13476.0",
+        "21562.75",
+        "29099.0"
+      ],
+      "semantic_context": "Column 'id' from table 'products' in database 'thelook_ecommerce'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample numeric values include: 1.0, 5386.25, 13476.0, 21562.75, 29099.0. Values range from 1 to 29099. The average value is 13673.33."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "products",
+      "column_name": "cost",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 993,
+      "min_value": "1.1859000150532462",
+      "max_value": "373.8420015675947",
+      "avg_value": 24.816285386955595,
+      "std_dev": 22.652990495516644,
+      "example_values": [
+        "1.1859000150532462",
+        "12.203227435745337",
+        "19.311775213165582",
+        "29.468980749556074",
+        "373.8420015675947"
+      ],
+      "semantic_context": "Column 'cost' from table 'products' in database 'thelook_ecommerce'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 993 unique values. This column has no null values. Sample numeric values include: 1.1859000150532462, 12.203227435745337, 19.311775213165582, 29.468980749556074, 373.8420015675947. Values range from 1.1859000150532462 to 373.8420015675947. The average value is 24.82. This appears to be a monetary field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "products",
+      "column_name": "category",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 26,
+      "example_values": [
+        "Swim",
+        "Tops & Tees",
+        "Shorts",
+        "Fashion Hoodies & Sweatshirts",
+        "Active",
+        "Dresses",
+        "Sweaters",
+        "Intimates",
+        "Accessories",
+        "Underwear"
+      ],
+      "top_values": {
+        "Swim": 142,
+        "Tops & Tees": 116,
+        "Shorts": 92,
+        "Fashion Hoodies & Sweatshirts": 85,
+        "Active": 64
+      },
+      "semantic_context": "Column 'category' from table 'products' in database 'thelook_ecommerce'. Data type is STRING. It has moderate cardinality with 26 unique values. This column has no null values. Sample values include: \"Swim\", \"Tops & Tees\", \"Shorts\", \"Fashion Hoodies & Sweatshirts\", \"Active\". The most common values are: Swim, Tops & Tees, Shorts. This appears to be a categorical classification field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "products",
+      "column_name": "name",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 960,
+      "example_values": [
+        "Chaps Big and Tall Solid V-Neck Vest",
+        "ASICS Unisex Adult Thrmopolis LT Beanie",
+        "Low Profile Dyed Cotton Twill Cap - Navy W39S55D",
+        "Lamaze Maternity Nursing Camisole",
+        "Hurley Juniors Getaway Pullover",
+        "MUNDI Big Fat Wallet",
+        "ASICS Men's ASX Boxer",
+        "Mundi Big Fat Wallet",
+        "Echo Design Women's Knit Touch Glove And Earbuds Music Set",
+        "Chaps Big and Tall Argyle V-Neck Vest"
+      ],
+      "semantic_context": "Column 'name' from table 'products' in database 'thelook_ecommerce'. Data type is STRING. It appears to be a high-cardinality identifier with 960 unique values. This column has no null values. Sample values include: \"Chaps Big and Tall Solid V-Neck Vest\", \"ASICS Unisex Adult Thrmopolis LT Beanie\", \"Low Profile Dyed Cotton Twill Cap - Navy W39S55D\", \"Lamaze Maternity Nursing Camisole\", \"Hurley Juniors Getaway Pullover\". This appears to be a name field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "products",
+      "column_name": "brand",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 105,
+      "example_values": [
+        "Hurley",
+        "Patty",
+        "Alki'i",
+        "ASICS",
+        "C-IN2",
+        "Ice",
+        "TYR",
+        "Matix",
+        "Gildan",
+        "ECHO"
+      ],
+      "semantic_context": "Column 'brand' from table 'products' in database 'thelook_ecommerce'. Data type is STRING. It contains 105 distinct values. This column has no null values. Sample values include: \"Hurley\", \"Patty\", \"Alki'i\", \"ASICS\", \"C-IN2\"."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "products",
+      "column_name": "retail_price",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 333,
+      "min_value": "2.950000047683716",
+      "max_value": "903.0",
+      "avg_value": 49.33969007754326,
+      "std_dev": 46.098951148456955,
+      "example_values": [
+        "2.950000047683716",
+        "25.0",
+        "39.880001068115234",
+        "58.625",
+        "903.0"
+      ],
+      "semantic_context": "Column 'retail_price' from table 'products' in database 'thelook_ecommerce'. Data type is NUMERIC. It contains 333 distinct values. This column has no null values. Sample numeric values include: 2.950000047683716, 25.0, 39.880001068115234, 58.625, 903.0. Values range from 2.950000047683716 to 903.0. The average value is 49.34. This appears to be a monetary field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "products",
+      "column_name": "department",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "example_values": [
+        "Women",
+        "Men"
+      ],
+      "top_values": {
+        "Women": 576,
+        "Men": 424
+      },
+      "semantic_context": "Column 'department' from table 'products' in database 'thelook_ecommerce'. Data type is STRING. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample values include: \"Women\", \"Men\". The most common values are: Women, Men."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "products",
+      "column_name": "sku",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "example_values": [
+        "EBD58B8A3F1D72F4206201DA62FB1204",
+        "D79C6256B9BDAC53A55801A066B70DA3",
+        "207F88018F72237565570F8A9E5CA240",
+        "4921F95BAF824205E1B13F22D60357A1",
+        "01E00F2F4BFCBB7505CB641066F2859B",
+        "8BB88F80D334B1869781BEB89F7B73BE",
+        "7137DEBD45AE4D0AB9AA953017286B20",
+        "7283518D47A05A09D33779A17ADF1707",
+        "21BE9A4BD4F81549A9D1D241981CEC3C",
+        "0731460A8A5CE1626210CBF4385AE0EF"
+      ],
+      "semantic_context": "Column 'sku' from table 'products' in database 'thelook_ecommerce'. Data type is STRING. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample values include: \"EBD58B8A3F1D72F4206201DA62FB1204\", \"D79C6256B9BDAC53A55801A066B70DA3\", \"207F88018F72237565570F8A9E5CA240\", \"4921F95BAF824205E1B13F22D60357A1\", \"01E00F2F4BFCBB7505CB641066F2859B\"."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "products",
+      "column_name": "distribution_center_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "min_value": "1",
+      "max_value": "1",
+      "avg_value": 1.0,
+      "std_dev": 0.0,
+      "example_values": [
+        "1.0"
+      ],
+      "semantic_context": "Column 'distribution_center_id' from table 'products' in database 'thelook_ecommerce'. Data type is NUMERIC. It contains a single constant value. This column has no null values. Sample numeric values include: 1.0. Values range from 1 to 1. The average value is 1.00."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "28",
+      "max_value": "99954",
+      "avg_value": 47941.696,
+      "std_dev": 28652.999179904145,
+      "example_values": [
+        "28.0",
+        "23278.75",
+        "46569.0",
+        "71676.25",
+        "99954.0"
+      ],
+      "semantic_context": "Column 'id' from table 'users' in database 'thelook_ecommerce'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample numeric values include: 28.0, 23278.75, 46569.0, 71676.25, 99954.0. Values range from 28 to 99954. The average value is 47941.70."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "first_name",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 344,
+      "example_values": [
+        "Michael",
+        "Christopher",
+        "James",
+        "John",
+        "Jennifer",
+        "Andrew",
+        "Thomas",
+        "Elizabeth",
+        "Robert",
+        "Anthony"
+      ],
+      "semantic_context": "Column 'first_name' from table 'users' in database 'thelook_ecommerce'. Data type is STRING. It contains 344 distinct values. This column has no null values. Sample values include: \"Michael\", \"Christopher\", \"James\", \"John\", \"Jennifer\". This appears to be a name field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "last_name",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 485,
+      "example_values": [
+        "Smith",
+        "Johnson",
+        "Brown",
+        "Davis",
+        "Martin",
+        "Miller",
+        "Rodriguez",
+        "Williams",
+        "Garcia",
+        "Jones"
+      ],
+      "semantic_context": "Column 'last_name' from table 'users' in database 'thelook_ecommerce'. Data type is STRING. It contains 485 distinct values. This column has no null values. Sample values include: \"Smith\", \"Johnson\", \"Brown\", \"Davis\", \"Martin\". This appears to be a name field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "email",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 999,
+      "example_values": [
+        "tiffanyjones@example.net",
+        "johnschwartz@example.net",
+        "tomgriffin@example.com",
+        "mitchellmorris@example.org",
+        "paulsimon@example.com",
+        "micheletodd@example.org",
+        "rogerluna@example.org",
+        "angelicareese@example.net",
+        "paulwillis@example.net",
+        "nicholasgolden@example.net"
+      ],
+      "semantic_context": "Column 'email' from table 'users' in database 'thelook_ecommerce'. Data type is STRING. It appears to be a high-cardinality identifier with 999 unique values. This column has no null values. Sample values include: \"tiffanyjones@example.net\", \"johnschwartz@example.net\", \"tomgriffin@example.com\", \"mitchellmorris@example.org\", \"paulsimon@example.com\". This appears to be an email address field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "age",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 59,
+      "min_value": "12",
+      "max_value": "70",
+      "avg_value": 41.38,
+      "std_dev": 17.50571478260885,
+      "example_values": [
+        "12.0",
+        "26.0",
+        "42.0",
+        "57.0",
+        "70.0"
+      ],
+      "semantic_context": "Column 'age' from table 'users' in database 'thelook_ecommerce'. Data type is NUMERIC. It has moderate cardinality with 59 unique values. This column has no null values. Sample numeric values include: 12.0, 26.0, 42.0, 57.0, 70.0. Values range from 12 to 70. The average value is 41.38. This appears to be an age or year field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "gender",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "example_values": [
+        "M",
+        "F"
+      ],
+      "top_values": {
+        "M": 509,
+        "F": 491
+      },
+      "semantic_context": "Column 'gender' from table 'users' in database 'thelook_ecommerce'. Data type is STRING. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample values include: \"M\", \"F\". The most common values are: M, F."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "state",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 8,
+      "example_values": [
+        "Amazonas",
+        "Alagoas",
+        "Alabama",
+        "Amap\u00e1",
+        "Aichi",
+        "Acre",
+        "Alaska",
+        "Akita"
+      ],
+      "top_values": {
+        "Amazonas": 356,
+        "Alagoas": 199,
+        "Alabama": 193,
+        "Amap\u00e1": 107,
+        "Aichi": 55
+      },
+      "semantic_context": "Column 'state' from table 'users' in database 'thelook_ecommerce'. Data type is STRING. It is a low-cardinality categorical field with 8 unique values. This column has no null values. Sample values include: \"Amazonas\", \"Alagoas\", \"Alabama\", \"Amap\u00e1\", \"Aichi\". The most common values are: Amazonas, Alagoas, Alabama. This appears to be a status or state field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "street_address",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "example_values": [
+        "363 Hill Spring Suite 538",
+        "4441 Rogers Park",
+        "63477 Timothy Rapid",
+        "7138 Tony Shore Apt. 379",
+        "124 Moyer Ways Suite 056",
+        "90315 Moreno Parkway",
+        "8547 Weber Prairie Apt. 877",
+        "845 Stone Summit Apt. 598",
+        "8561 David Center",
+        "99174 Cole Ville Suite 466"
+      ],
+      "semantic_context": "Column 'street_address' from table 'users' in database 'thelook_ecommerce'. Data type is STRING. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample values include: \"363 Hill Spring Suite 538\", \"4441 Rogers Park\", \"63477 Timothy Rapid\", \"7138 Tony Shore Apt. 379\", \"124 Moyer Ways Suite 056\"."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "postal_code",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 146,
+      "example_values": [
+        "68925-000",
+        "69055-010",
+        "69090",
+        "57160-000",
+        "69030-680",
+        "57230-000",
+        "68908",
+        "69460-000",
+        "69093",
+        "69400-000"
+      ],
+      "semantic_context": "Column 'postal_code' from table 'users' in database 'thelook_ecommerce'. Data type is STRING. It contains 146 distinct values. This column has no null values. Sample values include: \"68925-000\", \"69055-010\", \"69090\", \"57160-000\", \"69030-680\"."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "city",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 82,
+      "example_values": [
+        "Manaus",
+        "null",
+        "Macap\u00e1",
+        "Santana",
+        "Huntsville",
+        "Marechal Deodoro",
+        "Anchorage",
+        "Coruripe",
+        "Col\u00f4nia Boa Vista",
+        "Macei\u00f3"
+      ],
+      "top_values": {
+        "Manaus": 161,
+        "null": 159,
+        "Macap\u00e1": 66,
+        "Santana": 32,
+        "Huntsville": 21
+      },
+      "semantic_context": "Column 'city' from table 'users' in database 'thelook_ecommerce'. Data type is STRING. It has moderate cardinality with 82 unique values. This column has no null values. Sample values include: \"Manaus\", \"null\", \"Macap\u00e1\", \"Santana\", \"Huntsville\". This appears to be a geographic location field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "country",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "example_values": [
+        "Brasil",
+        "United States",
+        "Japan",
+        "Colombia"
+      ],
+      "top_values": {
+        "Brasil": 693,
+        "United States": 236,
+        "Japan": 59,
+        "Colombia": 12
+      },
+      "semantic_context": "Column 'country' from table 'users' in database 'thelook_ecommerce'. Data type is STRING. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample values include: \"Brasil\", \"United States\", \"Japan\", \"Colombia\". The most common values are: Brasil, United States, Japan. This appears to be a geographic location field."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "latitude",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 146,
+      "min_value": "-10.23130153",
+      "max_value": "64.86519412",
+      "avg_value": 7.390421976720785,
+      "std_dev": 20.51805990863597,
+      "example_values": [
+        "-10.23130153",
+        "-8.065346116",
+        "-3.084870225",
+        "31.26334993",
+        "64.86519412"
+      ],
+      "semantic_context": "Column 'latitude' from table 'users' in database 'thelook_ecommerce'. Data type is NUMERIC. It contains 146 distinct values. This column has no null values. Sample numeric values include: -10.23130153, -8.065346116, -3.084870225, 31.26334993, 64.86519412. Values range from -10.23130153 to 64.86519412. The average value is 7.39."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "longitude",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 146,
+      "min_value": "-149.9888737",
+      "max_value": "140.8412719",
+      "avg_value": -53.18960313976001,
+      "std_dev": 53.504935950991744,
+      "example_values": [
+        "-149.9888737",
+        "-72.87094866",
+        "-60.03765311",
+        "-38.04987492",
+        "140.8412719"
+      ],
+      "semantic_context": "Column 'longitude' from table 'users' in database 'thelook_ecommerce'. Data type is NUMERIC. It contains 146 distinct values. This column has no null values. Sample numeric values include: -149.9888737, -72.87094866, -60.03765311, -38.04987492, 140.8412719. Values range from -149.9888737 to 140.8412719. The average value is -53.19."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "traffic_source",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 5,
+      "example_values": [
+        "Search",
+        "Organic",
+        "Facebook",
+        "Email",
+        "Display"
+      ],
+      "top_values": {
+        "Search": 718,
+        "Organic": 138,
+        "Facebook": 58,
+        "Email": 46,
+        "Display": 40
+      },
+      "semantic_context": "Column 'traffic_source' from table 'users' in database 'thelook_ecommerce'. Data type is STRING. It is a low-cardinality categorical field with 5 unique values. This column has no null values. Sample values include: \"Search\", \"Organic\", \"Facebook\", \"Email\", \"Display\". The most common values are: Search, Organic, Facebook."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "created_at",
+      "data_type": "DATETIME",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 999,
+      "min_value": "2019-01-03 01:21:00+00:00",
+      "max_value": "2025-09-20 16:57:52.212948+00:00",
+      "example_values": [
+        "2019-01-03 01:21:00+00:00",
+        "2019-10-23 07:59:00+00:00",
+        "2020-07-19 16:36:00+00:00",
+        "2021-06-02 03:33:00+00:00",
+        "2022-03-13 12:47:00+00:00",
+        "2022-12-03 15:13:00+00:00",
+        "2023-08-20 02:04:00+00:00",
+        "2024-05-02 10:02:00+00:00",
+        "2025-02-13 17:15:00+00:00",
+        "2025-09-20 16:57:52.212948+00:00"
+      ],
+      "semantic_context": "Column 'created_at' from table 'users' in database 'thelook_ecommerce'. Data type is DATETIME. It appears to be a high-cardinality identifier with 999 unique values. This column has no null values. Sample dates include: 2019-01-03 01:21:00+00:00, 2019-10-23 07:59:00+00:00, 2020-07-19 16:36:00+00:00. Date values range from 2019-01-03 01:21:00+00:00 to 2025-09-20 16:57:52.212948+00:00. This appears to be a creation or registration timestamp."
+    },
+    {
+      "database_id": "thelook_ecommerce",
+      "table_name": "users",
+      "column_name": "user_geom",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 146,
+      "example_values": [
+        "POINT(-51.37753193 0.1268670887)",
+        "POINT(-60.00264859 -3.084870225)",
+        "POINT(-59.99409015 -3.02929341)",
+        "POINT(-35.9058385 -9.708467904)",
+        "POINT(-60.03765311 -3.112280152)",
+        "POINT(-36.23270508 -10.08503535)",
+        "POINT(-51.05580532 0.05520205505)",
+        "POINT(-64.13980634 -4.439318343)",
+        "POINT(-60.00287275 -3.01264088)",
+        "POINT(-60.9582885 -3.291289693)"
+      ],
+      "semantic_context": "Column 'user_geom' from table 'users' in database 'thelook_ecommerce'. Data type is STRING. It contains 146 distinct values. This column has no null values. Sample values include: \"POINT(-51.37753193 0.1268670887)\", \"POINT(-60.00264859 -3.084870225)\", \"POINT(-59.99409015 -3.02929341)\", \"POINT(-35.9058385 -9.708467904)\", \"POINT(-60.03765311 -3.112280152)\"."
+    }
+  ]
+}

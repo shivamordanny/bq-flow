@@ -1,0 +1,629 @@
+{
+  "database_id": "google_trends",
+  "timestamp": "2025-09-21T23:22:20.438986",
+  "total_columns": 34,
+  "total_selected": 22,
+  "total_excluded": 12,
+  "selection_details": {
+    "international_top_rising_terms": {
+      "total": 10,
+      "selected": 8,
+      "excluded": 2,
+      "selected_columns": [
+        "term",
+        "week",
+        "rank",
+        "country_name",
+        "country_code",
+        "region_name",
+        "region_code",
+        "percent_gain"
+      ],
+      "excluded_columns": [
+        "score",
+        "refresh_date"
+      ]
+    },
+    "international_top_terms": {
+      "total": 9,
+      "selected": 5,
+      "excluded": 4,
+      "selected_columns": [
+        "rank",
+        "region_name",
+        "region_code",
+        "term",
+        "week"
+      ],
+      "excluded_columns": [
+        "refresh_date",
+        "country_name",
+        "score",
+        "country_code"
+      ]
+    },
+    "top_rising_terms": {
+      "total": 8,
+      "selected": 6,
+      "excluded": 2,
+      "selected_columns": [
+        "term",
+        "week",
+        "rank",
+        "percent_gain",
+        "dma_name",
+        "dma_id"
+      ],
+      "excluded_columns": [
+        "score",
+        "refresh_date"
+      ]
+    },
+    "top_terms": {
+      "total": 7,
+      "selected": 3,
+      "excluded": 4,
+      "selected_columns": [
+        "dma_name",
+        "week",
+        "dma_id"
+      ],
+      "excluded_columns": [
+        "term",
+        "score",
+        "rank",
+        "refresh_date"
+      ]
+    }
+  },
+  "selected_profiles": [
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_rising_terms",
+      "column_name": "term",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 3,
+      "example_values": [
+        "borderlands 4",
+        "$680 cra one time payment",
+        "canada weather fall forecast"
+      ],
+      "top_values": {
+        "borderlands 4": 360,
+        "$680 cra one time payment": 326,
+        "canada weather fall forecast": 314
+      },
+      "semantic_context": "Column 'term' from table 'international_top_rising_terms' in database 'google_trends'. Data type is STRING. It is a low-cardinality categorical field with 3 unique values. This column has no null values. Sample values include: \"borderlands 4\", \"$680 cra one time payment\", \"canada weather fall forecast\". The most common values are: borderlands 4, $680 cra one time payment, canada weather fall forecast.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_rising_terms",
+      "column_name": "week",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 257,
+      "example_values": [
+        "2022-01-30",
+        "2021-05-23",
+        "2020-09-20",
+        "2020-11-08",
+        "2021-05-16",
+        "2023-11-26",
+        "2024-03-03",
+        "2021-10-17",
+        "2024-03-31",
+        "2023-04-02"
+      ],
+      "semantic_context": "Column 'week' from table 'international_top_rising_terms' in database 'google_trends'. Data type is STRING. It contains 257 distinct values. This column has no null values. Sample values include: \"2022-01-30\", \"2021-05-23\", \"2020-09-20\", \"2020-11-08\", \"2021-05-16\".",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_rising_terms",
+      "column_name": "rank",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 3,
+      "min_value": "8",
+      "max_value": "13",
+      "avg_value": 10.452,
+      "std_dev": 2.072677493483246,
+      "example_values": [
+        "8.0",
+        "10.0",
+        "13.0"
+      ],
+      "semantic_context": "Column 'rank' from table 'international_top_rising_terms' in database 'google_trends'. Data type is NUMERIC. It is a low-cardinality categorical field with 3 unique values. This column has no null values. Sample numeric values include: 8.0, 10.0, 13.0. Values range from 8 to 13. The average value is 10.45.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_rising_terms",
+      "column_name": "country_name",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "Canada"
+      ],
+      "top_values": {
+        "Canada": 1000
+      },
+      "semantic_context": "Column 'country_name' from table 'international_top_rising_terms' in database 'google_trends'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"Canada\". The most common values are: Canada. This appears to be a name field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_rising_terms",
+      "column_name": "country_code",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "CA"
+      ],
+      "top_values": {
+        "CA": 1000
+      },
+      "semantic_context": "Column 'country_code' from table 'international_top_rising_terms' in database 'google_trends'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"CA\". The most common values are: CA. This appears to be a geographic location field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_rising_terms",
+      "column_name": "region_name",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 13,
+      "example_values": [
+        "Saskatchewan",
+        "Manitoba",
+        "British Columbia",
+        "New Brunswick",
+        "Northwest Territories",
+        "Qu\u00e9bec",
+        "Ontario",
+        "Nunavut",
+        "Prince Edward Island",
+        "Newfoundland and Labrador"
+      ],
+      "top_values": {
+        "Saskatchewan": 91,
+        "Manitoba": 89,
+        "British Columbia": 85,
+        "New Brunswick": 81,
+        "Northwest Territories": 80
+      },
+      "semantic_context": "Column 'region_name' from table 'international_top_rising_terms' in database 'google_trends'. Data type is STRING. It has moderate cardinality with 13 unique values. This column has no null values. Sample values include: \"Saskatchewan\", \"Manitoba\", \"British Columbia\", \"New Brunswick\", \"Northwest Territories\". The most common values are: Saskatchewan, Manitoba, British Columbia. This appears to be a name field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_rising_terms",
+      "column_name": "region_code",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 13,
+      "example_values": [
+        "CA-SK",
+        "CA-MB",
+        "CA-BC",
+        "CA-NB",
+        "CA-NT",
+        "CA-QC",
+        "CA-ON",
+        "CA-NU",
+        "CA-PE",
+        "CA-NL"
+      ],
+      "top_values": {
+        "CA-SK": 91,
+        "CA-MB": 89,
+        "CA-BC": 85,
+        "CA-NB": 81,
+        "CA-NT": 80
+      },
+      "semantic_context": "Column 'region_code' from table 'international_top_rising_terms' in database 'google_trends'. Data type is STRING. It has moderate cardinality with 13 unique values. This column has no null values. Sample values include: \"CA-SK\", \"CA-MB\", \"CA-BC\", \"CA-NB\", \"CA-NT\". The most common values are: CA-SK, CA-MB, CA-BC. This appears to be a geographic location field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_rising_terms",
+      "column_name": "percent_gain",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 3,
+      "min_value": "300",
+      "max_value": "700",
+      "avg_value": 507.1,
+      "std_dev": 166.59034288440114,
+      "example_values": [
+        "300.0",
+        "550.0",
+        "700.0"
+      ],
+      "semantic_context": "Column 'percent_gain' from table 'international_top_rising_terms' in database 'google_trends'. Data type is NUMERIC. It is a low-cardinality categorical field with 3 unique values. This column has no null values. Sample numeric values include: 300.0, 550.0, 700.0. Values range from 300 to 700. The average value is 507.10.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_terms",
+      "column_name": "rank",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "min_value": "12",
+      "max_value": "20",
+      "avg_value": 14.456,
+      "std_dev": 3.691841504411273,
+      "example_values": [
+        "12.0",
+        "20.0"
+      ],
+      "semantic_context": "Column 'rank' from table 'international_top_terms' in database 'google_trends'. Data type is NUMERIC. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample numeric values include: 12.0, 20.0. Values range from 12 to 20. The average value is 14.46.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_terms",
+      "column_name": "region_name",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 24,
+      "example_values": [
+        "La Rioja Province",
+        "Buenos Aires Province",
+        "San Luis Province",
+        "Salta Province",
+        "Autonomous City of Buenos Aires",
+        "Entre Rios",
+        "Chaco Province",
+        "La Pampa Province",
+        "Catamarca Province",
+        "San Juan Province"
+      ],
+      "top_values": {
+        "La Rioja Province": 62,
+        "Buenos Aires Province": 62,
+        "San Luis Province": 61,
+        "Salta Province": 58,
+        "Autonomous City of Buenos Aires": 57
+      },
+      "semantic_context": "Column 'region_name' from table 'international_top_terms' in database 'google_trends'. Data type is STRING. It has moderate cardinality with 24 unique values. This column has no null values. Sample values include: \"La Rioja Province\", \"Buenos Aires Province\", \"San Luis Province\", \"Salta Province\", \"Autonomous City of Buenos Aires\". The most common values are: La Rioja Province, Buenos Aires Province, San Luis Province. This appears to be a name field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_terms",
+      "column_name": "region_code",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 24,
+      "example_values": [
+        "AR-F",
+        "AR-B",
+        "AR-D",
+        "AR-A",
+        "AR-C",
+        "AR-E",
+        "AR-H",
+        "AR-L",
+        "AR-K",
+        "AR-J"
+      ],
+      "top_values": {
+        "AR-F": 62,
+        "AR-B": 62,
+        "AR-D": 61,
+        "AR-A": 58,
+        "AR-C": 57
+      },
+      "semantic_context": "Column 'region_code' from table 'international_top_terms' in database 'google_trends'. Data type is STRING. It has moderate cardinality with 24 unique values. This column has no null values. Sample values include: \"AR-F\", \"AR-B\", \"AR-D\", \"AR-A\", \"AR-C\". The most common values are: AR-F, AR-B, AR-D. This appears to be a geographic location field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_terms",
+      "column_name": "term",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "example_values": [
+        "a qu\u00e9 hora juega independiente",
+        "andrea bocelli hipodromo de san isidro"
+      ],
+      "top_values": {
+        "a qu\u00e9 hora juega independiente": 693,
+        "andrea bocelli hipodromo de san isidro": 307
+      },
+      "semantic_context": "Column 'term' from table 'international_top_terms' in database 'google_trends'. Data type is STRING. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample values include: \"a qu\u00e9 hora juega independiente\", \"andrea bocelli hipodromo de san isidro\". The most common values are: a qu\u00e9 hora juega independiente, andrea bocelli hipodromo de san isidro.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "international_top_terms",
+      "column_name": "week",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 254,
+      "example_values": [
+        "2021-02-28",
+        "2021-10-03",
+        "2020-10-18",
+        "2022-02-20",
+        "2022-05-15",
+        "2020-11-01",
+        "2022-07-03",
+        "2025-01-26",
+        "2024-04-21",
+        "2022-07-24"
+      ],
+      "semantic_context": "Column 'week' from table 'international_top_terms' in database 'google_trends'. Data type is STRING. It contains 254 distinct values. This column has no null values. Sample values include: \"2021-02-28\", \"2021-10-03\", \"2020-10-18\", \"2022-02-20\", \"2022-05-15\".",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "top_rising_terms",
+      "column_name": "term",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "charlie kirk wife"
+      ],
+      "top_values": {
+        "charlie kirk wife": 1000
+      },
+      "semantic_context": "Column 'term' from table 'top_rising_terms' in database 'google_trends'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"charlie kirk wife\". The most common values are: charlie kirk wife.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "top_rising_terms",
+      "column_name": "week",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 260,
+      "example_values": [
+        "2024-04-14",
+        "2021-04-18",
+        "2025-07-06",
+        "2023-06-18",
+        "2023-04-16",
+        "2021-04-11",
+        "2023-12-24",
+        "2025-08-17",
+        "2020-09-20",
+        "2021-02-07"
+      ],
+      "semantic_context": "Column 'week' from table 'top_rising_terms' in database 'google_trends'. Data type is STRING. It contains 260 distinct values. This column has no null values. Sample values include: \"2024-04-14\", \"2021-04-18\", \"2025-07-06\", \"2023-06-18\", \"2023-04-16\".",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "top_rising_terms",
+      "column_name": "rank",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "min_value": "19",
+      "max_value": "19",
+      "avg_value": 19.0,
+      "std_dev": 0.0,
+      "example_values": [
+        "19.0"
+      ],
+      "semantic_context": "Column 'rank' from table 'top_rising_terms' in database 'google_trends'. Data type is NUMERIC. It contains a single constant value. This column has no null values. Sample numeric values include: 19.0. Values range from 19 to 19. The average value is 19.00.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "top_rising_terms",
+      "column_name": "percent_gain",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "min_value": "6950",
+      "max_value": "6950",
+      "avg_value": 6950.0,
+      "std_dev": 0.0,
+      "example_values": [
+        "6950.0"
+      ],
+      "semantic_context": "Column 'percent_gain' from table 'top_rising_terms' in database 'google_trends'. Data type is NUMERIC. It contains a single constant value. This column has no null values. Sample numeric values include: 6950.0. Values range from 6950 to 6950. The average value is 6950.00.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "top_rising_terms",
+      "column_name": "dma_name",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 8,
+      "example_values": [
+        "Dothan AL",
+        "Greenville-New Bern-Washington NC",
+        "Charlotte NC",
+        "Wilmington NC",
+        "Chattanooga TN",
+        "Baltimore MD",
+        "Atlanta GA",
+        "Portland-Auburn ME"
+      ],
+      "top_values": {
+        "Dothan AL": 143,
+        "Greenville-New Bern-Washington NC": 139,
+        "Charlotte NC": 137,
+        "Wilmington NC": 137,
+        "Chattanooga TN": 133
+      },
+      "semantic_context": "Column 'dma_name' from table 'top_rising_terms' in database 'google_trends'. Data type is STRING. It is a low-cardinality categorical field with 8 unique values. This column has no null values. Sample values include: \"Dothan AL\", \"Greenville-New Bern-Washington NC\", \"Charlotte NC\", \"Wilmington NC\", \"Chattanooga TN\". The most common values are: Dothan AL, Greenville-New Bern-Washington NC, Charlotte NC. This appears to be a name field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "top_rising_terms",
+      "column_name": "dma_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 8,
+      "min_value": "500",
+      "max_value": "606",
+      "avg_value": 544.419,
+      "std_dev": 33.480776594956716,
+      "example_values": [
+        "500.0",
+        "517.0",
+        "545.0",
+        "575.0",
+        "606.0"
+      ],
+      "semantic_context": "Column 'dma_id' from table 'top_rising_terms' in database 'google_trends'. Data type is NUMERIC. It is a low-cardinality categorical field with 8 unique values. This column has no null values. Sample numeric values include: 500.0, 517.0, 545.0, 575.0, 606.0. Values range from 500 to 606. The average value is 544.42.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "top_terms",
+      "column_name": "dma_name",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 8,
+      "example_values": [
+        "South Bend-Elkhart IN",
+        "Shreveport LA",
+        "Watertown NY",
+        "Lafayette LA",
+        "Lubbock TX",
+        "Salisbury MD",
+        "Terre Haute IN",
+        "Hattiesburg-Laurel MS"
+      ],
+      "top_values": {
+        "South Bend-Elkhart IN": 138,
+        "Shreveport LA": 137,
+        "Watertown NY": 137,
+        "Lafayette LA": 129,
+        "Lubbock TX": 128
+      },
+      "semantic_context": "Column 'dma_name' from table 'top_terms' in database 'google_trends'. Data type is STRING. It is a low-cardinality categorical field with 8 unique values. This column has no null values. Sample values include: \"South Bend-Elkhart IN\", \"Shreveport LA\", \"Watertown NY\", \"Lafayette LA\", \"Lubbock TX\". The most common values are: South Bend-Elkhart IN, Shreveport LA, Watertown NY. This appears to be a name field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "top_terms",
+      "column_name": "dma_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 8,
+      "min_value": "549",
+      "max_value": "710",
+      "avg_value": 609.261,
+      "std_dev": 45.16789809165375,
+      "example_values": [
+        "549.0",
+        "576.0",
+        "588.0",
+        "642.0",
+        "710.0"
+      ],
+      "semantic_context": "Column 'dma_id' from table 'top_terms' in database 'google_trends'. Data type is NUMERIC. It is a low-cardinality categorical field with 8 unique values. This column has no null values. Sample numeric values include: 549.0, 576.0, 588.0, 642.0, 710.0. Values range from 549 to 710. The average value is 609.26.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "google_trends",
+      "table_name": "top_terms",
+      "column_name": "week",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 261,
+      "example_values": [
+        "2021-10-31",
+        "2023-10-01",
+        "2022-05-15",
+        "2022-02-06",
+        "2025-05-11",
+        "2022-10-02",
+        "2022-03-20",
+        "2023-05-14",
+        "2020-11-08",
+        "2023-03-05"
+      ],
+      "semantic_context": "Column 'week' from table 'top_terms' in database 'google_trends'. Data type is STRING. It contains 261 distinct values. This column has no null values. Sample values include: \"2021-10-31\", \"2023-10-01\", \"2022-05-15\", \"2022-02-06\", \"2025-05-11\".",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    }
+  ],
+  "cost_savings": {
+    "total_cost": 0.017,
+    "reduced_cost": 0.011000000000000001,
+    "savings": 0.006,
+    "reduction_percentage": 35.29411764705882
+  }
+}

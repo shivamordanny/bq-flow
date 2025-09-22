@@ -1,0 +1,292 @@
+{
+  "database_id": "crypto_bitcoin",
+  "timestamp": "2025-09-23T03:19:57.808649",
+  "sample_size": 1000,
+  "total_columns": 13,
+  "tables_count": 2,
+  "profiles": [
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "hash",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "example_values": [
+        "000000000000000000083804549106013750046dda8ef1b5699783fb1ff1ac0d",
+        "0000000000000000000739682e9d96c26a1d55dc5cae0b240f7abd57e086f106",
+        "00000000000000000009cc9fba8ddf2d56573f0fc456d1230fa3112368472ac2",
+        "00000000000000000000ab5be5ae3ea63b5a3245b6c3cab51d287df16849e3cf",
+        "00000000000000000008c5360481e21b65331ed9f6a1206d3016b43f48dcd144",
+        "00000000000000000002f443acc8a9d64eebebd76e4ca2b8fe0514f40d2ca6df",
+        "00000000000000000008f1da115c9522a32084c4e9b0a59380530c9d866c049e",
+        "00000000000000000000229f0482f4034d7369fa21bd4f470579e2327eacf5f2",
+        "000000000000000000099f943ffb10cd80b74183bc58d39cc379c6d232c68513",
+        "00000000000000000008673cc332b69e047381367e99b4c52200c61ae653268e"
+      ],
+      "semantic_context": "Column 'hash' from table 'blocks' in database 'crypto_bitcoin'. Data type is STRING. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample values include: \"000000000000000000083804549106013750046dda8ef1b5699783fb1ff1ac0d\", \"0000000000000000000739682e9d96c26a1d55dc5cae0b240f7abd57e086f106\", \"00000000000000000009cc9fba8ddf2d56573f0fc456d1230fa3112368472ac2\", \"00000000000000000000ab5be5ae3ea63b5a3245b6c3cab51d287df16849e3cf\", \"00000000000000000008c5360481e21b65331ed9f6a1206d3016b43f48dcd144\"."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "size",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "261",
+      "max_value": "2085907",
+      "avg_value": 1218726.889,
+      "std_dev": 470013.26148488227,
+      "example_values": [
+        "261.0",
+        "1073531.0",
+        "1410141.5",
+        "1523086.25",
+        "2085907.0"
+      ],
+      "semantic_context": "Column 'size' from table 'blocks' in database 'crypto_bitcoin'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample numeric values include: 261.0, 1073531.0, 1410141.5, 1523086.25, 2085907.0. Values range from 261 to 2085907. The average value is 1218726.89."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "stripped_size",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 999,
+      "min_value": "261",
+      "max_value": "989310",
+      "avg_value": 691063.193,
+      "std_dev": 266015.5701107157,
+      "example_values": [
+        "261.0",
+        "594150.75",
+        "818239.5",
+        "854726.25",
+        "989310.0"
+      ],
+      "semantic_context": "Column 'stripped_size' from table 'blocks' in database 'crypto_bitcoin'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 999 unique values. This column has no null values. Sample numeric values include: 261.0, 594150.75, 818239.5, 854726.25, 989310.0. Values range from 261 to 989310. The average value is 691063.19."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "weight",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 829,
+      "min_value": "1044",
+      "max_value": "3999837",
+      "avg_value": 3291916.468,
+      "std_dev": 1229547.924842544,
+      "example_values": [
+        "1044.0",
+        "2892002.25",
+        "3993031.0",
+        "3993420.25",
+        "3999837.0"
+      ],
+      "semantic_context": "Column 'weight' from table 'blocks' in database 'crypto_bitcoin'. Data type is NUMERIC. It contains 829 distinct values. This column has no null values. Sample numeric values include: 1044.0, 2892002.25, 3993031.0, 3993420.25, 3999837.0. Values range from 1044 to 3999837. The average value is 3291916.47."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "number",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "719712",
+      "max_value": "721257",
+      "avg_value": 720496.041,
+      "std_dev": 452.39741239063,
+      "example_values": [
+        "719712.0",
+        "720099.75",
+        "720502.5",
+        "720884.5",
+        "721257.0"
+      ],
+      "semantic_context": "Column 'number' from table 'blocks' in database 'crypto_bitcoin'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample numeric values include: 719712.0, 720099.75, 720502.5, 720884.5, 721257.0. Values range from 719712 to 721257. The average value is 720496.04."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "version",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 261,
+      "min_value": "536870912",
+      "max_value": "1073733632",
+      "avg_value": 610362016.86,
+      "std_dev": 138469853.20110872,
+      "example_values": [
+        "536870912.0",
+        "536870916.0",
+        "541065216.0",
+        "608972804.0",
+        "1073733632.0"
+      ],
+      "semantic_context": "Column 'version' from table 'blocks' in database 'crypto_bitcoin'. Data type is NUMERIC. It contains 261 distinct values. This column has no null values. Sample numeric values include: 536870912.0, 536870916.0, 541065216.0, 608972804.0, 1073733632.0. Values range from 536870912 to 1073733632. The average value is 610362016.86."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "merkle_root",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "example_values": [
+        "d1905769fc5da2576c2800254e1c497a811bcb04fff4281d5d92e9f24073e120",
+        "614c8c25b49fab09edc62a05de198ff4bd5e7a8591ec265ff8742f7fa8bf3aaa",
+        "2680126fd8ecfc7c3e532d324541d6da144fdc2707e4df70a28caa870eb4aeb9",
+        "7b58704d9f541d2bb2442fa44ed61b93a4424930477608502ca80012c4b12c15",
+        "521437818334373a5a893dfa647b6820bfd39adcae1ce0c925aba9b1d9494a62",
+        "a3b33e011977202148f0d583b3b3033351548f1f62f4ffcef25b2bfd9f803e66",
+        "b2def70288e198157a9c334ade20de68581c0f82119c8e2d906a147745e4ea7f",
+        "1a60a87a41917d8f6a2b2ea5047db1b48ecd4c01e46701e74d46825e60694c52",
+        "d11df789e9fdd15d9f31570358a5c9ced9e0bd3e7c0f9e52d473c050662350b1",
+        "6a2ad00f1b44de7cdf0cd8f3c59039b3dbfd5bc0e32cd1bb5408baf3cce43ff4"
+      ],
+      "semantic_context": "Column 'merkle_root' from table 'blocks' in database 'crypto_bitcoin'. Data type is STRING. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample values include: \"d1905769fc5da2576c2800254e1c497a811bcb04fff4281d5d92e9f24073e120\", \"614c8c25b49fab09edc62a05de198ff4bd5e7a8591ec265ff8742f7fa8bf3aaa\", \"2680126fd8ecfc7c3e532d324541d6da144fdc2707e4df70a28caa870eb4aeb9\", \"7b58704d9f541d2bb2442fa44ed61b93a4424930477608502ca80012c4b12c15\", \"521437818334373a5a893dfa647b6820bfd39adcae1ce0c925aba9b1d9494a62\"."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "timestamp",
+      "data_type": "DATETIME",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "2022-01-21 03:08:10+00:00",
+      "max_value": "2022-01-31 23:56:11+00:00",
+      "example_values": [
+        "2022-01-21 03:08:10+00:00",
+        "2022-01-22 09:34:33+00:00",
+        "2022-01-23 15:41:07+00:00",
+        "2022-01-24 22:55:52+00:00",
+        "2022-01-26 03:23:58+00:00",
+        "2022-01-27 13:26:51+00:00",
+        "2022-01-28 15:54:32+00:00",
+        "2022-01-29 18:26:51+00:00",
+        "2022-01-30 19:33:01+00:00",
+        "2022-01-31 23:56:11+00:00"
+      ],
+      "semantic_context": "Column 'timestamp' from table 'blocks' in database 'crypto_bitcoin'. Data type is DATETIME. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample dates include: 2022-01-21 03:08:10+00:00, 2022-01-22 09:34:33+00:00, 2022-01-23 15:41:07+00:00. Date values range from 2022-01-21 03:08:10+00:00 to 2022-01-31 23:56:11+00:00."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "timestamp_month",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "2022-01-01"
+      ],
+      "top_values": {
+        "2022-01-01": 1000
+      },
+      "semantic_context": "Column 'timestamp_month' from table 'blocks' in database 'crypto_bitcoin'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"2022-01-01\". The most common values are: 2022-01-01."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "nonce",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "example_values": [
+        "3b8c7833",
+        "308e3c77",
+        "d541174b",
+        "193a4bec",
+        "5a79524e",
+        "4ac28158",
+        "e44d34ee",
+        "865459ff",
+        "354ebec6",
+        "c7576d4e"
+      ],
+      "semantic_context": "Column 'nonce' from table 'blocks' in database 'crypto_bitcoin'. Data type is STRING. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample values include: \"3b8c7833\", \"308e3c77\", \"d541174b\", \"193a4bec\", \"5a79524e\"."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "bits",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "170a9080"
+      ],
+      "top_values": {
+        "170a9080": 1000
+      },
+      "semantic_context": "Column 'bits' from table 'blocks' in database 'crypto_bitcoin'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"170a9080\". The most common values are: 170a9080."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "coinbase_param",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "example_values": [
+        "035a010b082f5669614254432f2cfabe6d6d1d11d1279e10ae04053b3b242e606aebf0b39e463f3acad2a7558d18f7736aa0100000000000000010ec87810cefe1d3cbc9b92e370102000000000000",
+        "03d3fd0a04ec07f0612f466f756e6472792055534120506f6f6c202364726f70676f6c642f05d19621490a540000000000",
+        "03cefb0a082f5669614254432f2cfabe6d6d56063f740d6704ca428ca7cf60b8a4c2e69ed0449313e91d439dc1e055ad01c4100000000000000010b8e2ee13837fafab65d9465ffc85000000000000",
+        "0399fb0a1362696e616e63652f383037ff003d00dc261838fabe6d6d85590d755b024e3cbdf6e8a7b50e4ecfa0574c400326be779b9a19da8654508a0200000000000000af6500008c590000",
+        "03c3fb0a04511feb612f466f756e6472792055534120506f6f6c202364726f70676f6c642f0f421bbdb604000000000000",
+        "03f9000b04ee75f7612f466f756e6472792055534120506f6f6c202364726f70676f6c642f020db3bb5b30520000000000",
+        "03d1000b082f5669614254432f2cfabe6d6d13214e7dcb28fd8937e86e3db1946832946dfaf6d922e288aaad2f08b0acd0b21000000000000000102e783c18c39779450f9145a6e9bd6d0000000000",
+        "0388000b04a661f6612f466f756e6472792055534120506f6f6c202364726f70676f6c642f06effb0e170f320000000000",
+        "0358000b04d8f0f5612f466f756e6472792055534120506f6f6c202364726f70676f6c642f073a12b76316590000000000",
+        "03c9000b315c20506f7765726564206279204c75786f722054656368205c000000002f1f1e2e7087f27200001595ca030a0000000000"
+      ],
+      "semantic_context": "Column 'coinbase_param' from table 'blocks' in database 'crypto_bitcoin'. Data type is STRING. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample values include: \"035a010b082f5669614254432f2cfabe6d6d1d11d1279e10ae04053b3b242e606aebf0b39e463f3acad2a7558d18f7736aa0100000000000000010ec87810cefe1d3cbc9b92e370102000000000000\", \"03d3fd0a04ec07f0612f466f756e6472792055534120506f6f6c202364726f70676f6c642f05d19621490a540000000000\", \"03cefb0a082f5669614254432f2cfabe6d6d56063f740d6704ca428ca7cf60b8a4c2e69ed0449313e91d439dc1e055ad01c4100000000000000010b8e2ee13837fafab65d9465ffc85000000000000\", \"0399fb0a1362696e616e63652f383037ff003d00dc261838fabe6d6d85590d755b024e3cbdf6e8a7b50e4ecfa0574c400326be779b9a19da8654508a0200000000000000af6500008c590000\", \"03c3fb0a04511feb612f466f756e6472792055534120506f6f6c202364726f70676f6c642f0f421bbdb604000000000000\"."
+    },
+    {
+      "database_id": "crypto_bitcoin",
+      "table_name": "blocks",
+      "column_name": "transaction_count",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 866,
+      "min_value": "1",
+      "max_value": "4728",
+      "avg_value": 1791.204,
+      "std_dev": 946.275345453644,
+      "example_values": [
+        "1.0",
+        "990.75",
+        "1832.5",
+        "2622.25",
+        "4728.0"
+      ],
+      "semantic_context": "Column 'transaction_count' from table 'blocks' in database 'crypto_bitcoin'. Data type is NUMERIC. It contains 866 distinct values. This column has no null values. Sample numeric values include: 1.0, 990.75, 1832.5, 2622.25, 4728.0. Values range from 1 to 4728. The average value is 1791.20. This appears to be a quantity or count field."
+    }
+  ]
+}

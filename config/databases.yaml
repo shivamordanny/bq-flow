@@ -1,0 +1,276 @@
+# BQ Flow Embeddings - Database Configuration
+# Separate configuration for database definitions
+# Categories: BQ-public (BigQuery public datasets) and custom
+
+# BigQuery Public Datasets (Default)
+bq_public:
+  # E-commerce & Business
+  thelook_ecommerce:
+    display_name: "TheLook E-commerce"
+    project_id: bigquery-public-data
+    dataset_name: thelook_ecommerce
+    description: "E-commerce platform with user, product, and order data"
+    category: "E-commerce"
+    sample_size: 1000
+    profiling_strategy: ecommerce
+    complexity: simple
+    highlights:
+      - "User demographics and behavior"
+      - "Product catalog and inventory"
+      - "Order history and analytics"
+
+  # News & Social Media
+  hackernews:
+    display_name: "Hacker News"
+    project_id: bigquery-public-data
+    dataset_name: hackernews
+    description: "Tech news aggregator with posts, comments, and user interactions"
+    category: "News/Social"
+    sample_size: 1000
+    profiling_strategy: generic
+    complexity: simple
+    highlights:
+      - "Story submissions and rankings"
+      - "Comment threads"
+      - "User karma and activity"
+
+  stackoverflow:
+    display_name: "Stack Overflow"
+    project_id: bigquery-public-data
+    dataset_name: stackoverflow
+    description: "Q&A platform for programmers with questions, answers, and reputation"
+    category: "Developer/Q&A"
+    sample_size: 1000
+    profiling_strategy: generic
+    complexity: simple
+    highlights:
+      - "Questions and answers"
+      - "Tags and categories"
+      - "User reputation system"
+
+  # Blockchain & Cryptocurrency
+  crypto_ethereum:
+    display_name: "Ethereum Blockchain"
+    project_id: bigquery-public-data
+    dataset_name: crypto_ethereum
+    description: "Ethereum blockchain data including transactions, blocks, and smart contracts"
+    category: "Blockchain"
+    sample_size: 1000
+    profiling_strategy: blockchain
+    complexity: simple
+    highlights:
+      - "Transaction history"
+      - "Block information"
+      - "Gas fees and mining data"
+
+  crypto_bitcoin:
+    display_name: "Bitcoin Blockchain"
+    project_id: bigquery-public-data
+    dataset_name: crypto_bitcoin
+    description: "Bitcoin blockchain data with transactions, blocks, and addresses"
+    category: "Blockchain"
+    sample_size: 1000
+    profiling_strategy: blockchain
+    complexity: simple
+    highlights:
+      - "Bitcoin transactions"
+      - "Block mining statistics"
+      - "Address balances"
+
+  # Transportation & Mobility
+  new_york_taxi:
+    display_name: "NYC Taxi Trips"
+    project_id: bigquery-public-data
+    dataset_name: new_york_taxi_trips
+    description: "New York City taxi trip data with pickup/dropoff locations and fares"
+    category: "Transportation"
+    sample_size: 1000
+    profiling_strategy: transportation
+    complexity: simple
+    highlights:
+      - "Trip duration and distance"
+      - "Fare calculations"
+      - "Pickup/dropoff patterns"
+
+  austin_bikeshare:
+    display_name: "Austin Bikeshare"
+    project_id: bigquery-public-data
+    dataset_name: austin_bikeshare
+    description: "Austin bike-sharing system with trip data and station information"
+    category: "Transportation"
+    sample_size: 1000
+    profiling_strategy: transportation
+    complexity: simple
+    highlights:
+      - "Bike trip patterns"
+      - "Station usage statistics"
+      - "Subscriber vs casual riders"
+
+  # Demographics & Census
+  usa_names:
+    display_name: "US Baby Names"
+    project_id: bigquery-public-data
+    dataset_name: usa_names
+    description: "Historical US baby names data from Social Security Administration"
+    category: "Demographics"
+    sample_size: 1000
+    profiling_strategy: demographic
+    complexity: simple
+    highlights:
+      - "Name popularity trends"
+      - "Gender distribution"
+      - "State-level statistics"
+
+  census_bureau_usa:
+    display_name: "US Census Data"
+    project_id: bigquery-public-data
+    dataset_name: census_bureau_usa
+    description: "US Census demographic and economic data by geography"
+    category: "Demographics"
+    sample_size: 1000
+    profiling_strategy: demographic
+    complexity: simple
+    highlights:
+      - "Population demographics"
+      - "Economic indicators"
+      - "Geographic distribution"
+
+  # Search & Trends
+  google_trends:
+    display_name: "Google Trends"
+    project_id: bigquery-public-data
+    dataset_name: google_trends
+    description: "Search interest data showing popularity of search terms over time"
+    category: "Search/Analytics"
+    sample_size: 1000
+    profiling_strategy: timeseries
+    complexity: simple
+    highlights:
+      - "Search term popularity"
+      - "Geographic trends"
+      - "Temporal patterns"
+
+  # Developer & Open Source
+  github_repos:
+    display_name: "GitHub Repositories"
+    project_id: bigquery-public-data
+    dataset_name: github_repos
+    description: "GitHub public repository data including commits, files, and languages"
+    category: "Developer/Open Source"
+    sample_size: 1000
+    profiling_strategy: developer
+    complexity: simple
+    highlights:
+      - "Repository metadata"
+      - "Commit history"
+      - "Programming languages"
+
+  # Finance & Economics
+  world_bank_intl_debt:
+    display_name: "World Bank International Debt"
+    project_id: bigquery-public-data
+    dataset_name: world_bank_intl_debt
+    description: "International debt statistics from World Bank"
+    category: "Finance"
+    sample_size: 1000
+    profiling_strategy: financial
+    complexity: simple
+    highlights:
+      - "Country debt indicators"
+      - "Economic metrics"
+      - "Time series analysis"
+
+# Custom Databases (User-defined)
+custom: {}  # Empty dictionary for user-defined databases
+  # Example custom database template:
+  # my_custom_db:
+  #   display_name: "My Custom Database"
+  #   project_id: "my-project"
+  #   dataset_name: "my_dataset"
+  #   description: "Description of custom database"
+  #   category: "Custom"
+  #   sample_size: 1000
+  #   profiling_strategy: generic
+  #   complexity: simple
+  #   auth_required: true  # Indicates special authentication needed
+
+# Profiling Strategies
+profiling_strategies:
+  ecommerce:
+    focus_columns:
+      - "*_id"
+      - "*_status"
+      - "*_price"
+      - "*_quantity"
+      - "*_date"
+    exclude_patterns:
+      - "*_hash"
+      - "*_token"
+
+  blockchain:
+    focus_columns:
+      - "block_*"
+      - "transaction_*"
+      - "*_hash"
+      - "*_fee"
+      - "*_value"
+    exclude_patterns:
+      - "*_raw"
+      - "*_hex"
+
+  transportation:
+    focus_columns:
+      - "*_location"
+      - "*_time"
+      - "*_duration"
+      - "*_distance"
+      - "*_fare"
+    exclude_patterns:
+      - "*_id"
+
+  demographic:
+    focus_columns:
+      - "*_population"
+      - "*_age"
+      - "*_gender"
+      - "*_income"
+      - "*_education"
+    exclude_patterns:
+      - "*_code"
+
+  timeseries:
+    focus_columns:
+      - "*_date"
+      - "*_time"
+      - "*_value"
+      - "*_score"
+      - "*_rank"
+    exclude_patterns:
+      - "*_internal"
+
+  developer:
+    focus_columns:
+      - "*_language"
+      - "*_commit"
+      - "*_author"
+      - "*_created"
+      - "*_stars"
+    exclude_patterns:
+      - "*_sha"
+      - "*_blob"
+
+  financial:
+    focus_columns:
+      - "*_amount"
+      - "*_rate"
+      - "*_value"
+      - "*_indicator"
+      - "*_year"
+    exclude_patterns:
+      - "*_internal_id"
+
+  generic:
+    focus_columns: []
+    exclude_patterns:
+      - "*_internal"
+      - "*_tmp"

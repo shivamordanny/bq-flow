@@ -1,0 +1,286 @@
+# BQ Flow Unified Configuration
+# This is the central configuration file for the entire system
+# Environment variables in .env will override these values
+
+# BigQuery Configuration
+bigquery:
+  # Project and dataset settings are loaded from environment variables
+  # Required env vars: PROJECT_ID, DATASET_ID
+  location: US
+
+  # Connection settings for BigQuery AI
+  connections:
+    gemini_connection:
+      name: us.gemini_connection
+      location: us
+      type: CLOUD_RESOURCE
+
+# Model Configuration
+models:
+  # Embedding model configuration
+  embedding:
+    model_name: text-embedding-005
+    dimensions: 768
+    task_type: RETRIEVAL_QUERY
+    batch_size: 250
+    cost_per_1k_tokens: 0.01
+    max_tokens: 2048
+    description: "Enterprise model with enhanced performance"
+
+  # SQL generation model configuration
+  generation:
+    model_name: gemini-2.5-flash
+    temperature: 0.1
+    max_tokens: 1000
+    connection_id: us.gemini_connection
+
+  # Insights generation model configuration
+  insight:
+    model_name: gemini-2.5-flash
+    temperature: 0.3
+    max_tokens: 500
+    connection_id: us.gemini_connection
+    # Choose insights method: v1 (AI.GENERATE) or v2 (AI.GENERATE_TABLE)
+    # v2 provides better structured output with defined schema
+    method: v2
+
+  # Alternative embedding model (for future use)
+  gemini_embedding:
+    model_name: text-multimodal-embedding-001
+    dimensions: 3072
+    batch_size: 50
+    cost_per_1k_tokens: 0.02
+    max_tokens: 2048
+    description: "Premium model with highest accuracy"
+
+# Dataset Configuration
+datasets:
+  # These are loaded from environment variables
+  # Required: PROJECT_ID, DATASET_ID
+  # Optional: METADATA_PROJECT, METADATA_DATASET, EXECUTION_PROJECT
+
+  # Table paths
+  tables:
+    enriched_metadata: enriched_metadata
+    database_registry: database_registry
+    embedding_jobs: embedding_jobs
+    vector_indexes_metadata: vector_indexes_metadata
+    query_embeddings: query_embeddings
+
+# Vector Search Configuration
+vector_search:
+  # Index configuration
+  index:
+    type: IVF
+    distance_type: COSINE
+    min_rows_required: 5000  # BigQuery hard requirement
+    default_num_lists: 50
+    auto_create: false
+    cumulative_mode: true
+
+  # Search parameters
+  search:
+    top_k: 15
+    fraction_lists_to_search: 0.1
+
+# Fallback Configuration
+fallback:
+  use_ml_functions: true
+  max_fallback_levels: 2
+  similarity_thresholds:
+    enriched: 0.4
+    original: 0.3
+    cache: 0.85
+
+# AI Forecast Configuration
+forecast:
+  method: AI.FORECAST
+  model: "TimesFM 2.0"
+  default_horizon: 30
+  max_horizon: 10000
+  confidence_level: 0.95
+  min_data_points: 10
+  show_model_metrics: false
+  cleanup_models: false
+  connection_id: us.gemini_connection
+
+# Performance Configuration
+performance:
+  enable_caching: true
+  cache_ttl_seconds: 3600
+  max_results: 1000
+  vector_search_top_k: 15
+  parallel_workers: 3
+  batch_size: 100
+  retry_attempts: 3
+  retry_delay_seconds: 5
+  timeout_seconds: 300
+
+# Security Configuration
+security:
+  use_parameterized_queries: true
+  max_query_length: 10000
+  require_authentication: false
+  allowed_projects: []
+  blocked_datasets: []
+
+# API Configuration
+api:
+  port: 8000
+  websocket_enabled: true
+  cors_origins:
+    - "http://localhost:3000"
+    - "http://localhost:8501"
+
+# UI Configuration
+ui:
+  # Backend configuration
+  backend:
+    ws_url: "ws://localhost:8000/ws/query/stream"
+    rest_url: "http://localhost:8000/api/query"
+    forecast_url: "http://localhost:8000/api/forecast"
+    api_base: "http://localhost:8000"
+  # Chainlit configuration
+  chainlit:
+    port: 3000
+
+  # Streamlit configuration
+  streamlit:
+    page_title: "BQ Flow: Data Onboarding & AI Training"
+    page_icon: "🔍"
+    layout: wide
+    sidebar_state: expanded
+    theme:
+      primary_color: "#4285F4"
+      background_color: "#FFFFFF"
+      secondary_background_color: "#F0F2F6"
+      text_color: "#262730"
+
+# Data Profiling Configuration
+profiling:
+  default_sample_size: 1000
+  max_sample_size: 10000
+  min_sample_size: 100
+  max_examples_per_column: 10
+  max_unique_for_examples: 1000
+
+# AI Assistant Configuration (for column selection)
+ai_assistant:
+  enabled: true
+  model: gemini-2.5-flash
+  max_columns_per_table: 100
+  min_columns_per_table: 5
+  temperature: 0.2
+  connection_id: us.gemini_connection
+
+  # Column selection patterns
+  exclusion_patterns:
+    - "*_id"
+    - "*_uuid"
+    - "created_*"
+    - "updated_*"
+    - "modified_*"
+    - "*_hash"
+    - "*_token"
+
+  inclusion_hints:
+    - "*_status"
+    - "*_type"
+    - "*_category"
+    - "*_amount"
+    - "*_count"
+    - "*_date"
+    - "*_name"
+
+# Logging Configuration
+logging:
+  level: INFO
+  file: logs/app.log
+  use_json: true
+  console_output: true
+
+# Monitoring Configuration
+monitoring:
+  track_costs: true
+  track_performance: true
+  alert_on_failure: true
+
+# Cost Tracking
+cost_tracking:
+  track_bigquery_costs: true
+  track_vertex_costs: true
+  daily_budget_usd: 10.00
+  alert_threshold_usd: 5.00
+
+  # Cost per operation (estimated)
+  operation_costs:
+    embedding_per_1k_tokens: 0.01
+    sql_generation_per_1k_tokens: 0.000075
+    insights_per_1k_tokens: 0.000075
+    forecast_per_query: 0.05
+
+# Feature Flags
+features:
+  enable_profiling: true
+  enable_embeddings: true
+  enable_vector_index: true
+  enable_cost_tracking: true
+  enable_monitoring: true
+  enable_ai_selection: true
+  auto_retry_failed: true
+  cache_results: true
+
+# BigQuery Features Metadata (for API responses)
+bigquery_features:
+  - name: "ML.GENERATE_EMBEDDING"
+    description: "Convert queries to vectors"
+    model: "text-embedding-005"
+    dimensionality: 768
+
+  - name: "VECTOR_SEARCH with IVF Index"
+    description: "Semantic column discovery"
+    index_type: "IVF"
+    distance_type: "COSINE"
+
+  - name: "AI.GENERATE"
+    description: "Natural language to SQL"
+    model: "gemini-2.5-flash"
+
+  - name: "AI.GENERATE_TABLE"
+    description: "Structured insights extraction"
+    model: "gemini-2.5-flash"
+
+  - name: "AI.FORECAST"
+    description: "Time-series prediction"
+    model: "TimesFM 2.0"
+
+  - name: "AI-Generated Explanations"
+    description: "Transparency through AI-powered insights"
+
+  - name: "Semantic Cache"
+    description: "Performance optimization"
+
+  - name: "Cost Tracking"
+    description: "Resource awareness"
+
+# Database Registry File (for database definitions)
+databases_file: databases.yaml
+
+# Embedding Models Configuration (for onboarding app)
+embedding_models:
+  default: text-embedding-005
+  text-embedding-005:
+    model_name: text-embedding-005
+    dimensions: 768
+    task_type: RETRIEVAL_QUERY
+    batch_size: 250
+    cost_per_1k_tokens: 0.01
+    max_tokens: 2048
+    description: "Enterprise model with enhanced performance"
+  text-multimodal-embedding-001:
+    model_name: text-multimodal-embedding-001
+    dimensions: 3072
+    batch_size: 50
+    cost_per_1k_tokens: 0.02
+    max_tokens: 2048
+    description: "Premium model with highest accuracy"
