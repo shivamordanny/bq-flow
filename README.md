@@ -117,6 +117,7 @@ git clone https://github.com/shivamordanny/bq-flow.git
 cd bq-flow
 
 # Install dependencies with Poetry
+poetry env activate
 poetry install
 
 # Copy environment template
@@ -131,19 +132,25 @@ cp .env.example .env
 ### Running the Application
 
 ```bash
-# Start all components (recommended)
+
+# For Data Onboarding & AI Training app
+# 1. Data Onboarding Tool (port 8501)
+cd bq_flow_onboarding && ./run.sh
+# Or run it with the command
+cd bq_flow_onboarding && poetry run streamlit run app.py --port 8501
+
+# Start Inference components together
 ./startup.sh
 
 # Or run components separately:
-
-# 1. Data Onboarding Tool (port 8501) - Run this first!
-cd bq_flow_onboarding && poetry run streamlit run app.py --port 8501
 
 # 2. Backend API (port 8000)
 poetry run python main.py
 
 # 3. Frontend UI (port 3000)
 cd src/ui && poetry run chainlit run chainlit_app.py --port 3000
+
+
 ```
 
 **Important**: Run the Data Onboarding Tool first to prepare your datasets for natural language queries.
@@ -241,24 +248,6 @@ POST /api/forecast            # Generate time-series forecast
 ws://localhost:8000/ws/query/stream  # Real-time query processing
 ```
 
-### Example Request
-```bash
-curl -X POST http://localhost:8000/api/query \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "Show top 10 customers by revenue",
-    "database_id": "bigquery-public-data.thelook_ecommerce"
-  }'
-```
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
-
 ## 🙏 Acknowledgments
 
 - Google Cloud BigQuery team for the amazing AI capabilities
@@ -268,9 +257,9 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) for deta
 
 ## 📧 Contact
 
-**Team**: BQ Flow
+**Author**: Shivam Bhardwaj
 **Hackathon Entry**: September 22, 2025
-**Contact**: [team@bqflow.ai](mailto:team@bqflow.ai)
+**Contact**: [linkedin](https://www.linkedin.com/in/shivamordanny/)
 
 ---
 
@@ -278,6 +267,6 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) for deta
 
 **Built with ❤️ for the BigQuery AI Hackathon 2025**
 
-[🔗 Live App](https://bqflow.ai) (Coming Soon) • [📺 Video Walkthrough](video-walkthrough/) • [📊 Kaggle Submission](https://kaggle.com/competitions/bigquery-ai-hackathon)
+[📺 Video Walkthrough](video-walkthrough/) • [📊 Kaggle Submission](https://kaggle.com/competitions/bigquery-ai-hackathon) • [🔗 Live App] (Coming Soon)
 
 </div>
