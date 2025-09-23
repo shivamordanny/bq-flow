@@ -85,7 +85,7 @@ graph TB
     REST --> FORE
     CACHE --> REST
 ```
-**For detailed architecture diagram, review the /arch_diagram directory**
+**For detailed architecture diagram, review the /arch-diagram directory**
 
 ### WebSocket Streaming Stages (0-100%)
 1. **Initialization** (0-5%) - Setup query context
