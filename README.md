@@ -85,6 +85,7 @@ graph TB
     REST --> FORE
     CACHE --> REST
 ```
+**For detailed architecture diagram, review the /arch_diagram directory**
 
 ### WebSocket Streaming Stages (0-100%)
 1. **Initialization** (0-5%) - Setup query context
@@ -267,6 +268,6 @@ ws://localhost:8000/ws/query/stream  # Real-time query processing
 
 **Built with ❤️ for the BigQuery AI Hackathon 2025**
 
-[📺 Video Walkthrough](video-walkthrough/) • [📊 Kaggle Submission](https://kaggle.com/competitions/bigquery-ai-hackathon) • [🔗 Live App] (Coming Soon)
+[📺 Video Walkthrough](video-walkthrough/) • [📊 Kaggle Submission](https://www.kaggle.com/competitions/bigquery-ai-hackathon/writeups/bq-flow-natural-language-to-sql-and-predictive-ins) • [🔗 Live App] (Coming Soon)
 
 </div>
