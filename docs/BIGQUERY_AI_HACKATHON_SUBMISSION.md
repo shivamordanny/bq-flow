@@ -31,7 +31,7 @@ We've built a comprehensive AI-powered workflow system that showcases:
 - **Model**: Gemini 2.5 Flash with 0.1 temperature for consistency
 - **Innovation**: Context-aware SQL generation using discovered semantic relationships
 - **Performance**: Real-time generation with Gemini 2.5 Flash
-- **Accuracy**: 92% first-attempt success rate on test queries
+- **Accuracy**: High first-attempt success rate on test queries
 
 #### **AI.GENERATE_TABLE** - Structured Business Insights
 - **Unique Feature**: Dynamic schema generation for structured outputs
@@ -51,7 +51,7 @@ We've built a comprehensive AI-powered workflow system that showcases:
 - **Innovation**: Automatic time-series detection in query results
 - **Capabilities**:
   - 1-10,000 period forecasting
-  - 95% confidence intervals
+  - Confidence intervals included
   - No model training required
   - Intelligent SQL expansion for historical data
 
@@ -62,12 +62,12 @@ Our semantic search implementation goes beyond keywords:
 #### **ML.GENERATE_EMBEDDING** - Intelligent Vectorization
 - **Model**: text-embedding-005 (768 dimensions)
 - **Optimization**: Batch processing (250 texts/batch)
-- **Cache Hit Rate**: >40% through semantic similarity matching
+- **Cache Hit Rate**: Significant improvement through semantic similarity matching
 
 #### **VECTOR_SEARCH** - Semantic Column Discovery
 - **Index Type**: IVF (Inverted File) for scalability
 - **Distance Metric**: Cosine similarity
-- **Performance**: Sub-second search with IVF indexing
+- **Performance**: Fast search with IVF indexing
 - **Innovation**: Enriched metadata with semantic context
 
 #### **ML.DISTANCE** - Intelligent Fallback
@@ -123,7 +123,7 @@ SELECT
 FROM database_metadata
 ```
 
-**Result**: 3x improvement in column discovery accuracy.
+**Result**: Substantial improvement in column discovery accuracy.
 
 ### 3. **Automatic Time-Series Detection**
 
@@ -154,7 +154,7 @@ WHERE ML.DISTANCE(
 ) < 0.15
 ```
 
-**Benefit**: 40% reduction in API calls and costs.
+**Benefit**: Significant reduction in API calls and costs.
 
 ### 5. **Intelligent Data Onboarding & AI Training**
 
@@ -170,7 +170,7 @@ BQ Flow: Data Onboarding & AI Training
 
 **Key Features**:
 - **AI-Powered Column Selection**: Uses AI.GENERATE to identify analytically valuable columns
-- **Cost Reduction**: 60% fewer embeddings by excluding system fields
+- **Cost Reduction**: Substantially fewer embeddings by excluding system fields
 - **Semantic Enrichment**: Creates context for every column
 - **Cumulative Indexing**: Combines multiple datasets to reach 5000-row threshold
 
@@ -186,7 +186,7 @@ BQ Flow is architected for rigorous benchmarking against enterprise-scale datase
 - **Dataset Scale**: 1000+ complex natural language queries
 - **Query Types**: Simple lookups to complex analytical queries
 - **BigQuery Native**: Optimized for BigQuery SQL dialect
-- **Target Accuracy**: 90%+ SQL generation success rate
+- **Target Accuracy**: High SQL generation success rate
 
 ### Benchmarking Application
 
@@ -208,7 +208,7 @@ Our solution leverages BigQuery's native capabilities for optimal performance:
 ### Expected Performance Characteristics
 
 Based on BigQuery AI architecture:
-- **Sub-second** embedding generation and vector search
+- **Fast** embedding generation and vector search
 - **Real-time** SQL generation with Gemini 2.5 Flash
 - **Linear scaling** with BigQuery slot allocation
 - **Cost-efficient** through semantic caching and batch processing
@@ -223,7 +223,7 @@ Based on BigQuery AI architecture:
 ### 2. **Reduced Time to Insights**
 - **Before**: Hours to find right columns and write SQL
 - **After**: Seconds from question to answer
-- **ROI**: 95% reduction in analysis time
+- **ROI**: Dramatic reduction in analysis time
 
 ### 3. **Predictive Capabilities**
 - **Before**: Separate ML pipeline needed
@@ -231,7 +231,7 @@ Based on BigQuery AI architecture:
 - **Value**: $0 infrastructure for predictive analytics
 
 ### 4. **Cost Optimization**
-- **Semantic Caching**: 40% reduction in API costs
+- **Semantic Caching**: Significant reduction in API costs
 - **Smart Fallbacks**: Graceful degradation
 - **Transparent Pricing**: Real-time cost tracking
 
@@ -345,7 +345,7 @@ BQ Flow:
 
 ### User Adoption
 - **Learning Curve**: 5 minutes (vs weeks for SQL)
-- **Query Success Rate**: 92% first attempt
+- **Query Success Rate**: High first attempt success
 - **User Satisfaction**: 4.8/5.0 rating
 
 ### Cost Savings

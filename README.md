@@ -9,7 +9,9 @@
 [![TimesFM](https://img.shields.io/badge/TimesFM-2.0-00ACC1)](https://github.com/google-research/timesfm)
 [![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python)](https://python.org)
 
-**[Live Demo](#demo) • [Features](#features) • [Architecture](#architecture) • [Setup](#setup) • [Usage](#usage)**
+**[Video Walkthrough](video-walkthrough/) • [Architecture Diagrams](arch-diagram/) • [Documentation](docs/) • [Screenshots](screenshots/) • [Live App](#demo) (Coming Soon)**
+
+**[Features](#features) • [Architecture](#architecture) • [Setup](#setup) • [Usage](#usage)**
 
 </div>
 
@@ -276,6 +278,6 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) for deta
 
 **Built with ❤️ for the BigQuery AI Hackathon 2025**
 
-[🔗 Live Demo](https://bqflow.ai) • [📺 Video Walkthrough](https://youtube.com/watch?v=demo) • [📊 Kaggle Submission](https://kaggle.com/competitions/bigquery-ai-hackathon)
+[🔗 Live App](https://bqflow.ai) (Coming Soon) • [📺 Video Walkthrough](video-walkthrough/) • [📊 Kaggle Submission](https://kaggle.com/competitions/bigquery-ai-hackathon)
 
 </div>
