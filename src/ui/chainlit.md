@@ -18,7 +18,7 @@ Before using BQ Flow, ensure your datasets are properly onboarded:
    - Creates semantic embeddings for each column
    - Builds vector indexes for fast search
    - Enables natural language understanding
-   - Reduces costs by 60% through intelligent column selection
+   - Significantly reduces costs through intelligent column selection
 
 ### 🎯 Quick Start
 
@@ -59,8 +59,8 @@ Before using BQ Flow, ensure your datasets are properly onboarded:
 ### 💡 Pro Tips
 
 - **Time-Series Detection**: If your results contain dates and values, forecast buttons will automatically appear
-- **Cost Optimization**: Our semantic caching reduces costs by 40%
-- **Performance**: Average query time is 2-3 seconds with 92% first-attempt success rate
+- **Cost Optimization**: Our semantic caching significantly reduces costs
+- **Performance**: Fast query processing with high first-attempt success rate
 
 ### 🏆 BigQuery AI Hackathon 2025
 

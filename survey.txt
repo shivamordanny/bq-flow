@@ -1,0 +1,64 @@
+**Team Survey: BigQuery AI - Building the Future of Data**
+
+**Instructions:**
+
+*   This survey is for bonus points.
+*   Points are awarded for completeness, not for the content of your answers.
+*   We highly encourage everyone to submit one.
+*   There are 3 questions in total - please answer all 3.
+---
+
+**Team Member Experience:**
+
+1)  **BigQuery AI:** Please list each team member(s) months of experience with BigQuery AI.
+    *   Team Member 1 (Shivam Bhardwaj): 1 month
+
+2)  **Google Cloud:** Please list each team member(s) months of experience with Google Cloud.
+    *   Team Member 1 (Shivam Bhardwaj): 60 months
+
+---
+
+3)  **Feedback:**
+
+We'd love to hear from you and your experience in working with the technology during this hackathon, positive or negative. Please provide any feedback on your experience with BigQuery AI.
+
+I'd like to share some context about my background - I'm a Lead Data Scientist/AI Engineer, and for the past 2 years, I've been deeply focused on solving the NL2SQL problem. I've built systems that handle massive databases with hundreds of tables and thousands of columns. Throughout this journey, I've explored various approaches including fine-tuned LLMs, RAG pipelines, and custom embedding solutions.
+
+When I say BigQuery AI has transformed my perspective, I mean it sincerely. Although I only started with BigQuery AI about a month ago specifically for this hackathon, I bring 5 years of Google Cloud experience and 2 years of dedicated NL2SQL development. What truly impressed me is the fundamental architectural difference - with all my previous solutions, data movement was inevitable. We had to extract schemas, build metadata stores, sync embeddings, and maintain separate vector databases. Keeping everything synchronized was a constant challenge.
+
+BigQuery AI's approach is fundamentally different - everything happens where the data lives. No movement. No synchronization issues. No stale metadata. The data never leaves the warehouse. This is a paradigm shift that deserves more recognition. I've spent considerable time building data pipelines just to move metadata around for NL2SQL systems, and with BigQuery AI, that entire complexity simply doesn't exist.
+
+The most impressive aspects of BigQuery AI deserve highlighting. Having built ML pipelines and trained models extensively, I can appreciate how revolutionary it is to have everything happen within BigQuery itself. No separate ML operations, no model versioning complexities - just SQL with AI functions that deliver embeddings, vector search, and forecasting capabilities. After 2 years of building complex NL2SQL systems, witnessing this level of native integration is remarkable.
+
+The AI.GENERATE function with Gemini 2.5 Flash exceeded my expectations significantly. I was initially skeptical about its ability to generate quality queries, but it demonstrates deep understanding of BigQuery's SQL dialect. Similarly, AI.FORECAST with TimesFM eliminates the need for traditional approaches like ARIMA models. It works directly with time-series data without requiring training or hyperparameter tuning - a significant advancement.
+
+To provide balanced feedback, I should mention some challenges encountered. The initial learning curve around when to use VECTOR_SEARCH versus ML.DISTANCE required considerable experimentation. While the documentation is comprehensive, more practical decision guidelines would be valuable - for instance, clearly stating "use VECTOR_SEARCH with an index for datasets over 5000 rows, otherwise use ML.DISTANCE."
+
+I also encountered undocumented rate limits during batch embedding generation. Through trial and error, I discovered the optimal batch size was around 100-250 texts. Having this information in the documentation would save developers significant time.
+
+The 5000-row minimum requirement for creating vector indexes posed challenges for smaller datasets. I had to combine multiple datasets to reach this threshold. Making this configurable would improve flexibility for various use cases.
+
+Cost visibility is another area for improvement. I developed my own cost estimator to track AI function expenses, as real-time cost information wasn't readily available. This feature would be particularly valuable for teams working within budget constraints.
+
+Some valuable discoveries from my experience:
+- ML.DISTANCE can serve as an effective semantic cache by using a similarity threshold < 0.15, which reduced API calls by 40%
+- Enriching column metadata by concatenating table name, column name, and sample values before embedding significantly improves search accuracy
+- Implementing WebSocket streaming with progress updates greatly enhances perceived performance, even when actual query execution time remains constant
+
+What particularly impressed me was the production readiness of the platform. The stability and reliability exceeded my expectations. We successfully built our entire system within a month - a timeline that would typically require 3-6 months using traditional approaches.
+
+Based on my experience, I'd like to suggest some enhancements that would further improve the developer experience:
+- Streaming token generation from AI.GENERATE for improved perceived performance
+- Additional embedding model options to balance between speed and accuracy requirements
+- Native progress tracking capabilities for long-running operations
+- An AI.EXPLAIN function to provide transparency into SQL generation logic
+
+In conclusion, BigQuery AI represents a fundamental shift in how we approach data analytics and machine learning. The elimination of separate ML infrastructure, ETL pipelines, and model training requirements is transformative. Everything happens where the data lives - this isn't merely an incremental improvement, but a completely different paradigm.
+
+Having spent 2 years focused on making NL2SQL conversational and accurate, BigQuery AI provides the foundation I've been seeking. It allows me to concentrate on the core challenge - making data interactions more natural and pushing accuracy boundaries - without the overhead of infrastructure management, data movement, or synchronization complexities. This platform enables pure focus on making data truly conversational, which is now my primary pursuit.
+
+The capability for users to simply ask "show me sales trends" and receive not just data, but comprehensive insights and forecasts, all without data leaving BigQuery - this represents the culmination of years of industry efforts. You've provided the platform that finally makes this vision achievable.
+
+I want to express my sincere appreciation to the BigQuery AI team for creating this platform. It significantly streamlines our development process and opens new possibilities for data interaction. I'm particularly excited about potential future enhancements like multimodal support (images, audio) and anomaly detection capabilities.
+
+The hackathon experience has been both challenging and immensely rewarding. After 2 years of working on NL2SQL challenges, experiencing this level of seamless integration is truly remarkable. BigQuery AI will undoubtedly be my primary choice for future data and AI projects. I'm committed to leveraging this platform to advance the field of conversational data analytics.

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BQ Flow - Detailed Architecture Diagram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 30px;
+        }
+
+        .architecture-container {
+            position: relative;
+            background: #f7fafc;
+            border-radius: 15px;
+            padding: 30px;
+            min-height: 800px;
+        }
+
+        /* Layer Styles */
+        .layer {
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .layer-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .layer-icon {
+            width: 30px;
+            height: 30px;
+            background: #4299e1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Component Box Styles */
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .component {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .component:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .component::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s ease;
+        }
+
+        .component:hover::before {
+            left: 100%;
+        }
+
+        .component-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .component-desc {
+            font-size: 0.9em;
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+
+        .port-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+        }
+
+        /* BigQuery AI Functions */
+        .ai-functions {
+            background: #e6fffa;
+            border: 2px solid #38b2ac;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .ai-functions-title {
+            color: #285e61;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .function-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .ai-function {
+            background: white;
+            border: 1px solid #38b2ac;
+            border-radius: 8px;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .ai-function:hover {
+            background: #38b2ac;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .function-name {
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .function-detail {
+            font-size: 0.8em;
+            opacity: 0.8;
+        }
+
+        /* Pipeline Stages */
+        .pipeline-container {
+            background: #fff5f5;
+            border: 2px solid #fc8181;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .pipeline-title {
+            color: #742a2a;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .stages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .stage {
+            background: white;
+            border: 1px solid #fc8181;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .stage:hover {
+            background: #fc8181;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(252, 129, 129, 0.3);
+        }
+
+        .stage-number {
+            font-size: 0.7em;
+            opacity: 0.7;
+            margin-bottom: 3px;
+        }
+
+        .stage-name {
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        .stage-progress {
+            font-size: 0.7em;
+            opacity: 0.7;
+            margin-top: 3px;
+        }
+
+        /* Flow Arrows */
+        .flow-arrow {
+            text-align: center;
+            color: #4a5568;
+            font-size: 2em;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        .info-title {
+            color: #276749;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .info-content {
+            color: #22543d;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        /* Data Flow Visualization */
+        .data-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 15px;
+            background: #edf2f7;
+            border-radius: 8px;
+        }
+
+        .flow-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .flow-connector {
+            width: 50px;
+            height: 2px;
+            background: #4a5568;
+            position: relative;
+        }
+
+        .flow-connector::after {
+            content: '▶';
+            position: absolute;
+            right: -10px;
+            top: -8px;
+            color: #4a5568;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            background: #2d3748;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            z-index: 1000;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .component-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stages-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 BQ Flow Architecture</h1>
+        <p class="subtitle">Natural Language to Data Intelligence powered by BigQuery AI</p>
+
+        <div class="architecture-container">
+
+            <!-- User Interface Layer -->
+            <div class="layer">
+                <div class="layer-title">
+                    <div class="layer-icon">1</div>
+                    User Interface Layer
+                </div>
+                <div class="component-grid">
+                    <div class="component" onmouseover="showTooltip(event, 'Conversational UI with real-time streaming')" onmouseout="hideTooltip()">
+                        <span class="port-badge">Port 3000</span>
+                        <div class="component-title">Chainlit Frontend</div>
+                        <div class="component-desc">Natural language chat interface with forecast visualization capabilities</div>
+                    </div>
+                    <div class="component" onmouseover="showTooltip(event, '4-step data preparation workflow')" onmouseout="hideTooltip()">
+                        <span class="port-badge">Port 8501</span>
+                        <div class="component-title">Data Onboarding Tool</div>
+                        <div class="component-desc">Streamlit app for dataset preparation: Discovery → Profiling → AI Selection → Embedding</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flow-arrow">⬇</div>
+
+            <!-- API & Streaming Layer -->
+            <div class="layer">
+                <div class="layer-title">
+                    <div class="layer-icon">2</div>
+                    API & Real-time Streaming Layer
+                </div>
+                <div class="component-grid">
+                    <div class="component" onmouseover="showTooltip(event, 'RESTful API with OpenAPI documentation')" onmouseout="hideTooltip()">
+                        <span class="port-badge">Port 8000</span>
+                        <div class="component-title">FastAPI Backend</div>
+                        <div class="component-desc">REST endpoints for query, databases, tables, columns, forecast operations</div>
+                    </div>
+                    <div class="component" onmouseover="showTooltip(event, '13-stage progress tracking')" onmouseout="hideTooltip()">
+                        <span class="port-badge">WS://8000</span>
+                        <div class="component-title">WebSocket Streaming</div>
+                        <div class="component-desc">Real-time progress updates through 13 distinct processing stages</div>
+                    </div>
+                    <div class="component" onmouseover="showTooltip(event, 'ML.DISTANCE similarity < 0.15')" onmouseout="hideTooltip()">
+                        <div class="component-title">Semantic Cache</div>
+                        <div class="component-desc">Query result caching with semantic similarity matching</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flow-arrow">⬇</div>
+
+            <!-- Core Processing Layer -->
+            <div class="layer">
+                <div class="layer-title">
+                    <div class="layer-icon">3</div>
+                    Core Processing Engine
+                </div>
+                <div class="component-grid">
+                    <div class="component" onmouseover="showTooltip(event, 'Orchestrates all BigQuery AI functions')" onmouseout="hideTooltip()">
+                        <div class="component-title">Query Orchestrator</div>
+                        <div class="component-desc">Manages the complete NL2SQL pipeline from understanding to execution</div>
+                    </div>
+                    <div class="component" onmouseover="showTooltip(event, 'Concatenates table + column + samples')" onmouseout="hideTooltip()">
+                        <div class="component-title">Metadata Enrichment</div>
+                        <div class="component-desc">Semantic context generation for improved column discovery</div>
+                    </div>
+                    <div class="component" onmouseover="showTooltip(event, 'Detects date/value columns automatically')" onmouseout="hideTooltip()">
+                        <div class="component-title">Time-Series Detector</div>
+                        <div class="component-desc">Automatic pattern recognition for forecast eligibility</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flow-arrow">⬇</div>
+
+            <!-- BigQuery AI Functions -->
+            <div class="ai-functions">
+                <div class="ai-functions-title">🧠 BigQuery AI Functions (Native Processing)</div>
+                <div class="function-grid">
+                    <div class="ai-function">
+                        <div class="function-name">ML.GENERATE_EMBEDDING</div>
+                        <div class="function-detail">text-embedding-005<br>768 dimensions<br>Batch: 100-250 texts</div>
+                    </div>
+                    <div class="ai-function">
+                        <div class="function-name">VECTOR_SEARCH</div>
+                        <div class="function-detail">IVF indexing<br>COSINE distance<br>5000+ rows threshold</div>
+                    </div>
+                    <div class="ai-function">
+                        <div class="function-name">AI.GENERATE</div>
+                        <div class="function-detail">Gemini 2.5 Flash<br>Temperature: 0.1<br>SQL generation</div>
+                    </div>
+                    <div class="ai-function">
+                        <div class="function-name">AI.GENERATE_TABLE</div>
+                        <div class="function-detail">Structured insights<br>Business recommendations<br>Custom schemas</div>
+                    </div>
+                    <div class="ai-function">
+                        <div class="function-name">AI.FORECAST</div>
+                        <div class="function-detail">TimesFM 2.0<br>1-10,000 periods<br>Confidence intervals</div>
+                    </div>
+                    <div class="ai-function">
+                        <div class="function-name">ML.DISTANCE</div>
+                        <div class="function-detail">Cosine similarity<br>Fallback search<br>Threshold < 0.15</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13-Stage Pipeline -->
+            <div class="pipeline-container">
+                <div class="pipeline-title">📊 13-Stage Processing Pipeline</div>
+                <div class="stages-grid">
+                    <div class="stage">
+                        <div class="stage-number">Stage 1</div>
+                        <div class="stage-name">Initialization</div>
+                        <div class="stage-progress">0-5%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 2</div>
+                        <div class="stage-name">Understanding</div>
+                        <div class="stage-progress">5-10%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 3</div>
+                        <div class="stage-name">Embedding</div>
+                        <div class="stage-progress">10-15%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 4</div>
+                        <div class="stage-name">Searching</div>
+                        <div class="stage-progress">15-25%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 5</div>
+                        <div class="stage-name">Columns Found</div>
+                        <div class="stage-progress">25-35%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 6</div>
+                        <div class="stage-name">SQL Generation</div>
+                        <div class="stage-progress">35-45%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 7</div>
+                        <div class="stage-name">SQL Building</div>
+                        <div class="stage-progress">45-60%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 8</div>
+                        <div class="stage-name">SQL Complete</div>
+                        <div class="stage-progress">60-65%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 9</div>
+                        <div class="stage-name">Executing</div>
+                        <div class="stage-progress">65-75%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 10</div>
+                        <div class="stage-name">Progress</div>
+                        <div class="stage-progress">75-85%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 11</div>
+                        <div class="stage-name">Results Ready</div>
+                        <div class="stage-progress">85-90%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 12</div>
+                        <div class="stage-name">Insights</div>
+                        <div class="stage-progress">90-95%</div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">Stage 13</div>
+                        <div class="stage-name">Complete</div>
+                        <div class="stage-progress">100%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Flow -->
+            <div class="info-box">
+                <div class="info-title">🔄 Data Flow Architecture</div>
+                <div class="info-content">
+                    <strong>Key Principle:</strong> Intelligence Where the Data Lives<br><br>
+                    <strong>Flow:</strong> User Query → WebSocket Connection → Query Embedding (ML.GENERATE_EMBEDDING) →
+                    Semantic Search (VECTOR_SEARCH) → SQL Generation (AI.GENERATE) →
+                    Query Execution (BigQuery) → Time-Series Detection →
+                    Optional Forecasting (AI.FORECAST) → Insights Generation (AI.GENERATE_TABLE) →
+                    Streaming Response<br><br>
+                    <strong>Security:</strong> All processing happens within BigQuery - data never leaves the warehouse<br>
+                    <strong>Performance:</strong> Fast processing with semantic caching and IVF indexing<br>
+                    <strong>Scalability:</strong> Serverless architecture with automatic scaling
+                </div>
+            </div>
+
+            <!-- Three-tier Fallback Strategy -->
+            <div class="data-flow">
+                <div class="flow-item">
+                    <strong>Primary</strong><br>
+                    VECTOR_SEARCH<br>
+                    <small>(IVF Index)</small>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-item">
+                    <strong>Fallback 1</strong><br>
+                    ML.DISTANCE<br>
+                    <small>(Cosine < 0.15)</small>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-item">
+                    <strong>Fallback 2</strong><br>
+                    Semantic Cache<br>
+                    <small>(Previous Queries)</small>
+                </div>
+            </div>
+
+            <!-- Key Technologies -->
+            <div class="info-box" style="background: #fef5e7; border-left-color: #f39c12;">
+                <div class="info-title" style="color: #7e5109;">🛠️ Technology Stack</div>
+                <div class="info-content" style="color: #6c4e09;">
+                    <strong>Frontend:</strong> Chainlit (React-based), Streamlit<br>
+                    <strong>Backend:</strong> FastAPI, Python 3.12+, Poetry<br>
+                    <strong>Database:</strong> Google BigQuery (Data Warehouse + AI Engine)<br>
+                    <strong>AI Models:</strong> Gemini 2.5 Flash, text-embedding-005, TimesFM 2.0<br>
+                    <strong>Protocols:</strong> REST API, WebSocket (13-stage streaming)<br>
+                    <strong>Configuration:</strong> YAML + Environment variables
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltip element -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        function showTooltip(event, text) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.textContent = text;
+            tooltip.style.left = event.pageX + 10 + 'px';
+            tooltip.style.top = event.pageY + 10 + 'px';
+            tooltip.classList.add('show');
+        }
+
+        function hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.classList.remove('show');
+        }
+
+        // Add click interactions for stages
+        document.querySelectorAll('.stage').forEach((stage, index) => {
+            stage.addEventListener('click', () => {
+                const stageName = stage.querySelector('.stage-name').textContent;
+                const stageProgress = stage.querySelector('.stage-progress').textContent;
+                alert(`Stage ${index + 1}: ${stageName}\nProgress: ${stageProgress}\n\nThis stage handles ${getStageDescription(stageName)}`);
+            });
+        });
+
+        function getStageDescription(stageName) {
+            const descriptions = {
+                'Initialization': 'Setting up query context and establishing connections',
+                'Understanding': 'Parsing and analyzing the natural language query',
+                'Embedding': 'Generating vector embeddings using ML.GENERATE_EMBEDDING',
+                'Searching': 'Finding relevant columns using VECTOR_SEARCH',
+                'Columns Found': 'Processing and ranking discovered columns',
+                'SQL Generation': 'Creating SQL using AI.GENERATE with Gemini 2.5 Flash',
+                'SQL Building': 'Constructing and optimizing the final query',
+                'SQL Complete': 'Validating the generated SQL syntax',
+                'Executing': 'Running the query on BigQuery',
+                'Progress': 'Processing query results',
+                'Results Ready': 'Formatting output for presentation',
+                'Insights': 'Generating business insights using AI.GENERATE_TABLE',
+                'Complete': 'Finalizing and returning all results'
+            };
+            return descriptions[stageName] || 'Processing step';
+        }
+
+        // Add animation to components on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.5s ease forwards';
+                }
+            });
+        });
+
+        document.querySelectorAll('.component, .ai-function, .stage').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add fadeInUp animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

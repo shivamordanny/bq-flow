@@ -23,7 +23,7 @@ This onboarding tool is the **crucial first step** in enabling natural language 
 - ✅ AI understands the semantic context of every column
 - ✅ Natural language instantly maps to the right tables
 - ✅ Vector indexes enable sub-second semantic search
-- ✅ Intelligent column selection reduces costs by 60%
+- ✅ Intelligent column selection significantly reduces costs
 - ✅ Accurate SQL generation from the first query
 
 ## 📋 The 4-Step Process
@@ -47,7 +47,7 @@ This onboarding tool is the **crucial first step** in enabling natural language 
 - Leverages AI.GENERATE with Gemini 2.5 Flash
 - Identifies business-relevant columns
 - Excludes system fields and IDs
-- Reduces embedding costs by 60%
+- Substantially reduces embedding costs
 - Focuses on columns users actually query
 
 ### Step 4: Embedding Generation 🧬
@@ -120,7 +120,7 @@ The interface will open at http://localhost:8501
 - Create indexes after reaching 5000 embeddings
 
 ### Cost Management
-- AI selection reduces embedding costs by 60%
+- AI selection significantly reduces embedding costs
 - Track costs in real-time during generation
 - Use caching for repeated embeddings
 - Monitor daily budget limits

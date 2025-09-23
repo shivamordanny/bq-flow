@@ -179,7 +179,7 @@ For detailed instructions, see [Data Onboarding Guide](bq_flow_onboarding/README
 BQ Flow is designed for comprehensive benchmarking against industry standards:
 - **Spider 2.0-lite**: Enterprise-scale BigQuery benchmark dataset
 - **1000+ Queries**: Complex natural language to SQL translations
-- **Target Accuracy**: 90%+ SQL generation success rate
+- **Target**: High SQL generation accuracy
 
 ### Architecture Advantages
 - Native BigQuery processing (no data movement)
@@ -252,6 +252,10 @@ curl -X POST http://localhost:8000/api/query \
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## 📄 License
+
+This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgments
 
