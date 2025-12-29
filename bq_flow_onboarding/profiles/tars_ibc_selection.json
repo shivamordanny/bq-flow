@@ -1,0 +1,1683 @@
+{
+  "database_id": "tars_ibc",
+  "timestamp": "2025-12-30T02:53:28.497304",
+  "total_columns": 99,
+  "total_selected": 61,
+  "total_excluded": 38,
+  "selection_details": {
+    "aggregator_daily": {
+      "total": 13,
+      "selected": 11,
+      "excluded": 2,
+      "selected_columns": [
+        "date",
+        "outlet_id",
+        "platform",
+        "total_orders",
+        "gross_value",
+        "commission_rate",
+        "commission_amount",
+        "net_payout",
+        "avg_rating",
+        "avg_delivery_time",
+        "cancellation_count"
+      ],
+      "excluded_columns": [
+        "id",
+        "tenant_id"
+      ]
+    },
+    "beer_batches": {
+      "total": 10,
+      "selected": 6,
+      "excluded": 4,
+      "selected_columns": [
+        "beer_type",
+        "brew_date",
+        "kegs_produced",
+        "batch_cost",
+        "status",
+        "quality_score"
+      ],
+      "excluded_columns": [
+        "batch_id",
+        "tenant_id",
+        "batch_number",
+        "notes"
+      ]
+    },
+    "daily_sales": {
+      "total": 10,
+      "selected": 7,
+      "excluded": 3,
+      "selected_columns": [
+        "date",
+        "outlet_id",
+        "order_source",
+        "quantity_sold",
+        "gross_revenue",
+        "discounts",
+        "net_revenue"
+      ],
+      "excluded_columns": [
+        "id",
+        "tenant_id",
+        "item_id"
+      ]
+    },
+    "events": {
+      "total": 7,
+      "selected": 4,
+      "excluded": 3,
+      "selected_columns": [
+        "event_name",
+        "event_date",
+        "event_type",
+        "impact_multiplier"
+      ],
+      "excluded_columns": [
+        "event_id",
+        "city",
+        "notes"
+      ]
+    },
+    "hourly_sales": {
+      "total": 9,
+      "selected": 6,
+      "excluded": 3,
+      "selected_columns": [
+        "date",
+        "hour",
+        "outlet_id",
+        "covers",
+        "revenue",
+        "avg_check_size"
+      ],
+      "excluded_columns": [
+        "id",
+        "tenant_id",
+        "order_count"
+      ]
+    },
+    "kegs": {
+      "total": 10,
+      "selected": 7,
+      "excluded": 3,
+      "selected_columns": [
+        "batch_id",
+        "outlet_id",
+        "volume_liters",
+        "status",
+        "assigned_date",
+        "tapped_date",
+        "empty_date"
+      ],
+      "excluded_columns": [
+        "keg_id",
+        "tenant_id",
+        "keg_number"
+      ]
+    },
+    "menu_items": {
+      "total": 13,
+      "selected": 8,
+      "excluded": 5,
+      "selected_columns": [
+        "item_name",
+        "category",
+        "subcategory",
+        "base_price",
+        "cost_price",
+        "is_beer",
+        "is_vegetarian",
+        "popularity_score"
+      ],
+      "excluded_columns": [
+        "item_id",
+        "tenant_id",
+        "item_code",
+        "is_available",
+        "created_at"
+      ]
+    },
+    "outlets": {
+      "total": 12,
+      "selected": 5,
+      "excluded": 7,
+      "selected_columns": [
+        "outlet_name",
+        "city",
+        "area",
+        "seating_capacity",
+        "has_outdoor"
+      ],
+      "excluded_columns": [
+        "outlet_id",
+        "tenant_id",
+        "pos_system",
+        "opening_time",
+        "closing_time",
+        "created_at",
+        "is_active"
+      ]
+    },
+    "tenants": {
+      "total": 7,
+      "selected": 4,
+      "excluded": 3,
+      "selected_columns": [
+        "business_name",
+        "business_type",
+        "subscription_tier",
+        "is_active"
+      ],
+      "excluded_columns": [
+        "tenant_id",
+        "settings",
+        "created_at"
+      ]
+    },
+    "users": {
+      "total": 8,
+      "selected": 3,
+      "excluded": 5,
+      "selected_columns": [
+        "role",
+        "is_active",
+        "user_id"
+      ],
+      "excluded_columns": [
+        "tenant_id",
+        "phone_number",
+        "name",
+        "outlet_access",
+        "created_at"
+      ]
+    }
+  },
+  "selected_profiles": [
+    {
+      "database_id": "tars_ibc",
+      "table_name": "aggregator_daily",
+      "column_name": "date",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 184,
+      "example_values": [
+        "2025-07-22",
+        "2025-07-05",
+        "2025-08-09",
+        "2025-08-25",
+        "2025-07-01",
+        "2025-08-07",
+        "2025-10-24",
+        "2025-07-04",
+        "2025-09-18",
+        "2025-10-31"
+      ],
+      "semantic_context": "Column 'date' from table 'aggregator_daily' in database 'tars_ibc'. Data type is STRING. It contains 184 distinct values. This column has no null values. Sample values include: \"2025-07-22\", \"2025-07-05\", \"2025-08-09\", \"2025-08-25\", \"2025-07-01\".",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "aggregator_daily",
+      "column_name": "outlet_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "min_value": "1",
+      "max_value": "4",
+      "avg_value": 2.485,
+      "std_dev": 1.1167014023551782,
+      "example_values": [
+        "1.0",
+        "1.75",
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "semantic_context": "Column 'outlet_id' from table 'aggregator_daily' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample numeric values include: 1.0, 1.75, 2.0, 3.0, 4.0. Values range from 1 to 4. The average value is 2.48.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "aggregator_daily",
+      "column_name": "platform",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "example_values": [
+        "zomato",
+        "swiggy"
+      ],
+      "top_values": {
+        "zomato": 577,
+        "swiggy": 423
+      },
+      "semantic_context": "Column 'platform' from table 'aggregator_daily' in database 'tars_ibc'. Data type is STRING. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample values include: \"zomato\", \"swiggy\". The most common values are: zomato, swiggy.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "aggregator_daily",
+      "column_name": "total_orders",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 37,
+      "min_value": "1",
+      "max_value": "49",
+      "avg_value": 12.352,
+      "std_dev": 6.354720959922511,
+      "example_values": [
+        "1.0",
+        "8.0",
+        "12.0",
+        "16.0",
+        "49.0"
+      ],
+      "semantic_context": "Column 'total_orders' from table 'aggregator_daily' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 37 unique values. This column has no null values. Sample numeric values include: 1.0, 8.0, 12.0, 16.0, 49.0. Values range from 1 to 49. The average value is 12.35.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "aggregator_daily",
+      "column_name": "gross_value",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 702,
+      "min_value": "350.0",
+      "max_value": "50420.0",
+      "avg_value": 13319.705,
+      "std_dev": 6886.156103651649,
+      "example_values": [
+        "350.0",
+        "8297.5",
+        "13415.0",
+        "17816.25",
+        "50420.0"
+      ],
+      "semantic_context": "Column 'gross_value' from table 'aggregator_daily' in database 'tars_ibc'. Data type is NUMERIC. It contains 702 distinct values. This column has no null values. Sample numeric values include: 350.0, 8297.5, 13415.0, 17816.25, 50420.0. Values range from 350.0 to 50420.0. The average value is 13319.70.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "aggregator_daily",
+      "column_name": "commission_rate",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 426,
+      "min_value": "0.2",
+      "max_value": "0.2499",
+      "avg_value": 0.2257201,
+      "std_dev": 0.013179770572447092,
+      "example_values": [
+        "0.2",
+        "0.215675",
+        "0.2267",
+        "0.2362",
+        "0.2499"
+      ],
+      "semantic_context": "Column 'commission_rate' from table 'aggregator_daily' in database 'tars_ibc'. Data type is NUMERIC. It contains 426 distinct values. This column has no null values. Sample numeric values include: 0.2, 0.215675, 0.2267, 0.2362, 0.2499. Values range from 0.2 to 0.2499. The average value is 0.23.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "aggregator_daily",
+      "column_name": "commission_amount",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 998,
+      "min_value": "70.6",
+      "max_value": "11620.34",
+      "avg_value": 3026.6925100000003,
+      "std_dev": 1610.899458224848,
+      "example_values": [
+        "70.6",
+        "1860.385",
+        "3027.1000000000004",
+        "4049.4900000000002",
+        "11620.34"
+      ],
+      "semantic_context": "Column 'commission_amount' from table 'aggregator_daily' in database 'tars_ibc'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 998 unique values. This column has no null values. Sample numeric values include: 70.6, 1860.385, 3027.1000000000004, 4049.4900000000002, 11620.34. Values range from 70.6 to 11620.34. The average value is 3026.69. This appears to be a monetary field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "aggregator_daily",
+      "column_name": "net_payout",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1000,
+      "min_value": "274.59",
+      "max_value": "39154.61",
+      "avg_value": 10293.012490000001,
+      "std_dev": 5290.0087998548015,
+      "example_values": [
+        "274.59",
+        "6530.4225",
+        "10367.91",
+        "13740.779999999999",
+        "39154.61"
+      ],
+      "semantic_context": "Column 'net_payout' from table 'aggregator_daily' in database 'tars_ibc'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 1000 unique values. This column has no null values. Sample numeric values include: 274.59, 6530.4225, 10367.91, 13740.779999999999, 39154.61. Values range from 274.59 to 39154.61. The average value is 10293.01.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "aggregator_daily",
+      "column_name": "avg_rating",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 7,
+      "min_value": "3.7",
+      "max_value": "4.3",
+      "avg_value": 4.0458,
+      "std_dev": 0.130151063381362,
+      "example_values": [
+        "3.7",
+        "3.9",
+        "4.1",
+        "4.2",
+        "4.3"
+      ],
+      "semantic_context": "Column 'avg_rating' from table 'aggregator_daily' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 7 unique values. This column has no null values. Sample numeric values include: 3.7, 3.9, 4.1, 4.2, 4.3. Values range from 3.7 to 4.3. The average value is 4.05. This appears to be a score or rating field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "aggregator_daily",
+      "column_name": "avg_delivery_time",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 27,
+      "min_value": "25",
+      "max_value": "54",
+      "avg_value": 34.924,
+      "std_dev": 5.47925599385959,
+      "example_values": [
+        "25.0",
+        "30.0",
+        "35.0",
+        "39.0",
+        "54.0"
+      ],
+      "semantic_context": "Column 'avg_delivery_time' from table 'aggregator_daily' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 27 unique values. This column has no null values. Sample numeric values include: 25.0, 30.0, 35.0, 39.0, 54.0. Values range from 25 to 54. The average value is 34.92.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "aggregator_daily",
+      "column_name": "cancellation_count",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "min_value": "0",
+      "max_value": "1",
+      "avg_value": 0.012,
+      "std_dev": 0.10893974420691409,
+      "example_values": [
+        "0.0",
+        "1.0"
+      ],
+      "semantic_context": "Column 'cancellation_count' from table 'aggregator_daily' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample numeric values include: 0.0, 1.0. Values range from 0 to 1. The average value is 0.01. This appears to be a quantity or count field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "beer_batches",
+      "column_name": "beer_type",
+      "data_type": "STRING",
+      "total_count": 14,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 9,
+      "example_values": [
+        "India Pale Ale",
+        "American Pale Ale",
+        "Seasonal Special",
+        "Amber Ale",
+        "Smoked Porter",
+        "Hefeweizen",
+        "Kolsch",
+        "Oatmeal Stout",
+        "Wheat Beer"
+      ],
+      "top_values": {
+        "India Pale Ale": 2,
+        "American Pale Ale": 2,
+        "Seasonal Special": 2,
+        "Amber Ale": 2,
+        "Smoked Porter": 2
+      },
+      "semantic_context": "Column 'beer_type' from table 'beer_batches' in database 'tars_ibc'. Data type is STRING. It is a low-cardinality categorical field with 9 unique values. This column has no null values. Sample values include: \"India Pale Ale\", \"American Pale Ale\", \"Seasonal Special\", \"Amber Ale\", \"Smoked Porter\". The most common values are: India Pale Ale, American Pale Ale, Seasonal Special. This appears to be a categorical classification field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "beer_batches",
+      "column_name": "brew_date",
+      "data_type": "STRING",
+      "total_count": 14,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 14,
+      "example_values": [
+        "2025-09-08",
+        "2025-08-26",
+        "2025-07-12",
+        "2025-07-26",
+        "2025-11-06",
+        "2025-11-22",
+        "2025-07-01",
+        "2025-09-23",
+        "2025-10-22",
+        "2025-08-10"
+      ],
+      "top_values": {
+        "2025-09-08": 1,
+        "2025-08-26": 1,
+        "2025-07-12": 1,
+        "2025-07-26": 1,
+        "2025-11-06": 1
+      },
+      "semantic_context": "Column 'brew_date' from table 'beer_batches' in database 'tars_ibc'. Data type is STRING. It has moderate cardinality with 14 unique values. This column has no null values. Sample values include: \"2025-09-08\", \"2025-08-26\", \"2025-07-12\", \"2025-07-26\", \"2025-11-06\". The most common values are: 2025-09-08, 2025-08-26, 2025-07-12.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "beer_batches",
+      "column_name": "kegs_produced",
+      "data_type": "NUMERIC",
+      "total_count": 14,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 7,
+      "min_value": "8",
+      "max_value": "15",
+      "avg_value": 11.357142857142858,
+      "std_dev": 2.2738358934473855,
+      "example_values": [
+        "8.0",
+        "10.0",
+        "10.5",
+        "13.5",
+        "15.0"
+      ],
+      "semantic_context": "Column 'kegs_produced' from table 'beer_batches' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 7 unique values. This column has no null values. Sample numeric values include: 8.0, 10.0, 10.5, 13.5, 15.0. Values range from 8 to 15. The average value is 11.36.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "beer_batches",
+      "column_name": "batch_cost",
+      "data_type": "NUMERIC",
+      "total_count": 14,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 7,
+      "min_value": "20000.0",
+      "max_value": "37500.0",
+      "avg_value": 28392.85714285714,
+      "std_dev": 5684.589733618464,
+      "example_values": [
+        "20000.0",
+        "25000.0",
+        "26250.0",
+        "33750.0",
+        "37500.0"
+      ],
+      "semantic_context": "Column 'batch_cost' from table 'beer_batches' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 7 unique values. This column has no null values. Sample numeric values include: 20000.0, 25000.0, 26250.0, 33750.0, 37500.0. Values range from 20000.0 to 37500.0. The average value is 28392.86. This appears to be a monetary field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "beer_batches",
+      "column_name": "status",
+      "data_type": "STRING",
+      "total_count": 14,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "example_values": [
+        "depleted",
+        "active"
+      ],
+      "top_values": {
+        "depleted": 11,
+        "active": 3
+      },
+      "semantic_context": "Column 'status' from table 'beer_batches' in database 'tars_ibc'. Data type is STRING. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample values include: \"depleted\", \"active\". The most common values are: depleted, active. This appears to be a status or state field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "beer_batches",
+      "column_name": "quality_score",
+      "data_type": "NUMERIC",
+      "total_count": 14,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 3,
+      "min_value": "4.0",
+      "max_value": "5.0",
+      "avg_value": 4.214285714285714,
+      "std_dev": 0.323103086329432,
+      "example_values": [
+        "4.0",
+        "4.5",
+        "5.0"
+      ],
+      "semantic_context": "Column 'quality_score' from table 'beer_batches' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 3 unique values. This column has no null values. Sample numeric values include: 4.0, 4.5, 5.0. Values range from 4.0 to 5.0. The average value is 4.21. This appears to be a score or rating field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "daily_sales",
+      "column_name": "date",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 184,
+      "example_values": [
+        "2025-12-21",
+        "2025-11-26",
+        "2025-11-07",
+        "2025-07-20",
+        "2025-11-23",
+        "2025-12-11",
+        "2025-10-20",
+        "2025-11-21",
+        "2025-11-16",
+        "2025-11-14"
+      ],
+      "semantic_context": "Column 'date' from table 'daily_sales' in database 'tars_ibc'. Data type is STRING. It contains 184 distinct values. This column has no null values. Sample values include: \"2025-12-21\", \"2025-11-26\", \"2025-11-07\", \"2025-07-20\", \"2025-11-23\".",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "daily_sales",
+      "column_name": "outlet_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "min_value": "1",
+      "max_value": "4",
+      "avg_value": 2.549,
+      "std_dev": 1.1264403525566136,
+      "example_values": [
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "semantic_context": "Column 'outlet_id' from table 'daily_sales' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample numeric values include: 1.0, 2.0, 3.0, 4.0. Values range from 1 to 4. The average value is 2.55.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "daily_sales",
+      "column_name": "order_source",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "example_values": [
+        "dine_in",
+        "takeaway"
+      ],
+      "top_values": {
+        "dine_in": 633,
+        "takeaway": 367
+      },
+      "semantic_context": "Column 'order_source' from table 'daily_sales' in database 'tars_ibc'. Data type is STRING. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample values include: \"dine_in\", \"takeaway\". The most common values are: dine_in, takeaway.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "daily_sales",
+      "column_name": "quantity_sold",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 10,
+      "min_value": "1",
+      "max_value": "10",
+      "avg_value": 4.066,
+      "std_dev": 2.8989736197571805,
+      "example_values": [
+        "1.0",
+        "4.0",
+        "6.0",
+        "10.0"
+      ],
+      "semantic_context": "Column 'quantity_sold' from table 'daily_sales' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 10 unique values. This column has no null values. Sample numeric values include: 1.0, 4.0, 6.0, 10.0. Values range from 1 to 10. The average value is 4.07. This appears to be a quantity or count field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "daily_sales",
+      "column_name": "gross_revenue",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 10,
+      "min_value": "350.0",
+      "max_value": "3500.0",
+      "avg_value": 1423.1,
+      "std_dev": 1014.6407669150129,
+      "example_values": [
+        "350.0",
+        "1400.0",
+        "2100.0",
+        "3500.0"
+      ],
+      "semantic_context": "Column 'gross_revenue' from table 'daily_sales' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 10 unique values. This column has no null values. Sample numeric values include: 350.0, 1400.0, 2100.0, 3500.0. Values range from 350.0 to 3500.0. The average value is 1423.10.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "daily_sales",
+      "column_name": "discounts",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 16,
+      "min_value": "0.0",
+      "max_value": "175.0",
+      "avg_value": 54.145,
+      "std_dev": 41.97051642819336,
+      "example_values": [
+        "0.0",
+        "17.5",
+        "52.5",
+        "87.5",
+        "175.0"
+      ],
+      "semantic_context": "Column 'discounts' from table 'daily_sales' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 16 unique values. This column has no null values. Sample numeric values include: 0.0, 17.5, 52.5, 87.5, 175.0. Values range from 0.0 to 175.0. The average value is 54.15. This appears to be a quantity or count field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "daily_sales",
+      "column_name": "net_revenue",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 27,
+      "min_value": "332.5",
+      "max_value": "3412.5",
+      "avg_value": 1368.955,
+      "std_dev": 979.6789895918192,
+      "example_values": [
+        "332.5",
+        "341.25",
+        "1330.0",
+        "2047.5",
+        "3412.5"
+      ],
+      "semantic_context": "Column 'net_revenue' from table 'daily_sales' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 27 unique values. This column has no null values. Sample numeric values include: 332.5, 341.25, 1330.0, 2047.5, 3412.5. Values range from 332.5 to 3412.5. The average value is 1368.95.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "events",
+      "column_name": "event_name",
+      "data_type": "STRING",
+      "total_count": 18,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 18,
+      "example_values": [
+        "RCB vs MI",
+        "CSK vs MI",
+        "Boxing Day",
+        "Christmas",
+        "Christmas Eve",
+        "IND vs ENG",
+        "IND vs PAK",
+        "IND vs AUS",
+        "Diwali Day 2",
+        "Diwali"
+      ],
+      "top_values": {
+        "RCB vs MI": 1,
+        "CSK vs MI": 1,
+        "Boxing Day": 1,
+        "Christmas": 1,
+        "Christmas Eve": 1
+      },
+      "semantic_context": "Column 'event_name' from table 'events' in database 'tars_ibc'. Data type is STRING. It has moderate cardinality with 18 unique values. This column has no null values. Sample values include: \"RCB vs MI\", \"CSK vs MI\", \"Boxing Day\", \"Christmas\", \"Christmas Eve\". The most common values are: RCB vs MI, CSK vs MI, Boxing Day. This appears to be a name field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "events",
+      "column_name": "event_date",
+      "data_type": "STRING",
+      "total_count": 18,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 18,
+      "example_values": [
+        "2025-07-15",
+        "2025-07-22",
+        "2025-12-26",
+        "2025-12-25",
+        "2025-12-24",
+        "2025-11-22",
+        "2025-11-15",
+        "2025-11-08",
+        "2025-10-22",
+        "2025-10-21"
+      ],
+      "top_values": {
+        "2025-07-15": 1,
+        "2025-07-22": 1,
+        "2025-12-26": 1,
+        "2025-12-25": 1,
+        "2025-12-24": 1
+      },
+      "semantic_context": "Column 'event_date' from table 'events' in database 'tars_ibc'. Data type is STRING. It has moderate cardinality with 18 unique values. This column has no null values. Sample values include: \"2025-07-15\", \"2025-07-22\", \"2025-12-26\", \"2025-12-25\", \"2025-12-24\". The most common values are: 2025-07-15, 2025-07-22, 2025-12-26.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "events",
+      "column_name": "event_type",
+      "data_type": "STRING",
+      "total_count": 18,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "example_values": [
+        "festival",
+        "holiday",
+        "ipl",
+        "cricket"
+      ],
+      "top_values": {
+        "festival": 7,
+        "holiday": 5,
+        "ipl": 3,
+        "cricket": 3
+      },
+      "semantic_context": "Column 'event_type' from table 'events' in database 'tars_ibc'. Data type is STRING. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample values include: \"festival\", \"holiday\", \"ipl\", \"cricket\". The most common values are: festival, holiday, ipl. This appears to be a categorical classification field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "events",
+      "column_name": "impact_multiplier",
+      "data_type": "NUMERIC",
+      "total_count": 18,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 18,
+      "min_value": "0.55",
+      "max_value": "2.0",
+      "avg_value": 1.2944444444444445,
+      "std_dev": 0.4835192340261167,
+      "example_values": [
+        "0.55",
+        "0.8125",
+        "1.375",
+        "1.6875",
+        "2.0"
+      ],
+      "semantic_context": "Column 'impact_multiplier' from table 'events' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 18 unique values. This column has no null values. Sample numeric values include: 0.55, 0.8125, 1.375, 1.6875, 2.0. Values range from 0.55 to 2.0. The average value is 1.29.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "hourly_sales",
+      "column_name": "date",
+      "data_type": "STRING",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 157,
+      "example_values": [
+        "2025-07-07",
+        "2025-07-14",
+        "2025-07-09",
+        "2025-07-01",
+        "2025-07-21",
+        "2025-07-08",
+        "2025-07-23",
+        "2025-07-17",
+        "2025-07-16",
+        "2025-08-27"
+      ],
+      "semantic_context": "Column 'date' from table 'hourly_sales' in database 'tars_ibc'. Data type is STRING. It contains 157 distinct values. This column has no null values. Sample values include: \"2025-07-07\", \"2025-07-14\", \"2025-07-09\", \"2025-07-01\", \"2025-07-21\".",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "hourly_sales",
+      "column_name": "hour",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 10,
+      "min_value": "0",
+      "max_value": "23",
+      "avg_value": 10.267,
+      "std_dev": 6.5212143989626075,
+      "example_values": [
+        "0.0",
+        "1.0",
+        "12.0",
+        "16.0",
+        "23.0"
+      ],
+      "semantic_context": "Column 'hour' from table 'hourly_sales' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 10 unique values. This column has no null values. Sample numeric values include: 0.0, 1.0, 12.0, 16.0, 23.0. Values range from 0 to 23. The average value is 10.27.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "hourly_sales",
+      "column_name": "outlet_id",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "min_value": "1",
+      "max_value": "4",
+      "avg_value": 2.217,
+      "std_dev": 1.0682003801029338,
+      "example_values": [
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "semantic_context": "Column 'outlet_id' from table 'hourly_sales' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample numeric values include: 1.0, 2.0, 3.0, 4.0. Values range from 1 to 4. The average value is 2.22.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "hourly_sales",
+      "column_name": "covers",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "min_value": "2",
+      "max_value": "3",
+      "avg_value": 2.197,
+      "std_dev": 0.39793133748091436,
+      "example_values": [
+        "2.0",
+        "3.0"
+      ],
+      "semantic_context": "Column 'covers' from table 'hourly_sales' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample numeric values include: 2.0, 3.0. Values range from 2 to 3. The average value is 2.20.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "hourly_sales",
+      "column_name": "revenue",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 993,
+      "min_value": "335.98",
+      "max_value": "2381.61",
+      "avg_value": 1518.22571,
+      "std_dev": 388.06246591669907,
+      "example_values": [
+        "335.98",
+        "1249.3675",
+        "1528.8200000000002",
+        "1810.3025",
+        "2381.61"
+      ],
+      "semantic_context": "Column 'revenue' from table 'hourly_sales' in database 'tars_ibc'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 993 unique values. This column has no null values. Sample numeric values include: 335.98, 1249.3675, 1528.8200000000002, 1810.3025, 2381.61. Values range from 335.98 to 2381.61. The average value is 1518.23.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "hourly_sales",
+      "column_name": "avg_check_size",
+      "data_type": "NUMERIC",
+      "total_count": 1000,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 993,
+      "min_value": "335.98",
+      "max_value": "2381.61",
+      "avg_value": 1518.22571,
+      "std_dev": 388.06246591669907,
+      "example_values": [
+        "335.98",
+        "1249.3675",
+        "1528.8200000000002",
+        "1810.3025",
+        "2381.61"
+      ],
+      "semantic_context": "Column 'avg_check_size' from table 'hourly_sales' in database 'tars_ibc'. Data type is NUMERIC. It appears to be a high-cardinality identifier with 993 unique values. This column has no null values. Sample numeric values include: 335.98, 1249.3675, 1528.8200000000002, 1810.3025, 2381.61. Values range from 335.98 to 2381.61. The average value is 1518.23.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "kegs",
+      "column_name": "batch_id",
+      "data_type": "NUMERIC",
+      "total_count": 159,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 14,
+      "min_value": "1",
+      "max_value": "14",
+      "avg_value": 7.654088050314465,
+      "std_dev": 4.087627861792444,
+      "example_values": [
+        "1.0",
+        "4.0",
+        "8.0",
+        "11.0",
+        "14.0"
+      ],
+      "semantic_context": "Column 'batch_id' from table 'kegs' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 14 unique values. This column has no null values. Sample numeric values include: 1.0, 4.0, 8.0, 11.0, 14.0. Values range from 1 to 14. The average value is 7.65.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "kegs",
+      "column_name": "outlet_id",
+      "data_type": "NUMERIC",
+      "total_count": 159,
+      "null_count": 5,
+      "null_percentage": 3.1446540880503147,
+      "distinct_count": 4,
+      "min_value": "1.0",
+      "max_value": "4.0",
+      "avg_value": 2.4285714285714284,
+      "std_dev": 1.131007664873173,
+      "example_values": [
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "semantic_context": "Column 'outlet_id' from table 'kegs' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 4 unique values. About 3.1% of values are null. Sample numeric values include: 1.0, 2.0, 3.0, 4.0. Values range from 1.0 to 4.0. The average value is 2.43.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "kegs",
+      "column_name": "volume_liters",
+      "data_type": "NUMERIC",
+      "total_count": 159,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 3,
+      "min_value": "20",
+      "max_value": "50",
+      "avg_value": 33.710691823899374,
+      "std_dev": 12.250211009264902,
+      "example_values": [
+        "20.0",
+        "30.0",
+        "50.0"
+      ],
+      "semantic_context": "Column 'volume_liters' from table 'kegs' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 3 unique values. This column has no null values. Sample numeric values include: 20.0, 30.0, 50.0. Values range from 20 to 50. The average value is 33.71.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "kegs",
+      "column_name": "status",
+      "data_type": "STRING",
+      "total_count": 159,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "example_values": [
+        "empty",
+        "warehouse",
+        "full",
+        "tapped"
+      ],
+      "top_values": {
+        "empty": 147,
+        "warehouse": 5,
+        "full": 5,
+        "tapped": 2
+      },
+      "semantic_context": "Column 'status' from table 'kegs' in database 'tars_ibc'. Data type is STRING. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample values include: \"empty\", \"warehouse\", \"full\", \"tapped\". The most common values are: empty, warehouse, full. This appears to be a status or state field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "kegs",
+      "column_name": "assigned_date",
+      "data_type": "STRING",
+      "total_count": 159,
+      "null_count": 5,
+      "null_percentage": 3.1446540880503147,
+      "distinct_count": 61,
+      "example_values": [
+        "2025-10-09",
+        "2025-10-27",
+        "2025-12-05",
+        "2025-10-25",
+        "2025-09-26",
+        "2025-08-29",
+        "2025-12-09",
+        "2025-09-11",
+        "2025-09-25",
+        "2025-09-27"
+      ],
+      "top_values": {
+        "2025-10-09": 6,
+        "2025-10-27": 5,
+        "2025-12-05": 5,
+        "2025-10-25": 4,
+        "2025-09-26": 4
+      },
+      "semantic_context": "Column 'assigned_date' from table 'kegs' in database 'tars_ibc'. Data type is STRING. It has moderate cardinality with 61 unique values. About 3.1% of values are null. Sample values include: \"2025-10-09\", \"2025-10-27\", \"2025-12-05\", \"2025-10-25\", \"2025-09-26\".",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "kegs",
+      "column_name": "tapped_date",
+      "data_type": "STRING",
+      "total_count": 159,
+      "null_count": 5,
+      "null_percentage": 3.1446540880503147,
+      "distinct_count": 82,
+      "example_values": [
+        "2025-10-27",
+        "2025-09-28",
+        "2025-10-28",
+        "2025-07-06",
+        "2025-09-27",
+        "2025-11-26",
+        "2025-10-11",
+        "2025-08-01",
+        "2025-08-31",
+        "2025-12-09"
+      ],
+      "top_values": {
+        "2025-10-27": 6,
+        "2025-09-28": 5,
+        "2025-10-28": 5,
+        "2025-07-06": 4,
+        "2025-09-27": 4
+      },
+      "semantic_context": "Column 'tapped_date' from table 'kegs' in database 'tars_ibc'. Data type is STRING. It has moderate cardinality with 82 unique values. About 3.1% of values are null. Sample values include: \"2025-10-27\", \"2025-09-28\", \"2025-10-28\", \"2025-07-06\", \"2025-09-27\".",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "kegs",
+      "column_name": "empty_date",
+      "data_type": "STRING",
+      "total_count": 159,
+      "null_count": 5,
+      "null_percentage": 3.1446540880503147,
+      "distinct_count": 88,
+      "example_values": [
+        "2025-11-01",
+        "2025-10-05",
+        "2025-07-10",
+        "2025-11-02",
+        "2025-09-05",
+        "2025-11-15",
+        "2025-11-18",
+        "2025-12-02",
+        "2025-12-13",
+        "2025-11-03"
+      ],
+      "top_values": {
+        "2025-11-01": 6,
+        "2025-10-05": 5,
+        "2025-07-10": 4,
+        "2025-11-02": 4,
+        "2025-09-05": 3
+      },
+      "semantic_context": "Column 'empty_date' from table 'kegs' in database 'tars_ibc'. Data type is STRING. It has moderate cardinality with 88 unique values. About 3.1% of values are null. Sample values include: \"2025-11-01\", \"2025-10-05\", \"2025-07-10\", \"2025-11-02\", \"2025-09-05\".",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "menu_items",
+      "column_name": "item_name",
+      "data_type": "STRING",
+      "total_count": 78,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 78,
+      "example_values": [
+        "Hefeweizen",
+        "Cheesecake",
+        "Cosmopolitan",
+        "Margarita",
+        "Mojito",
+        "Long Island Iced Tea",
+        "Gulab Jamun",
+        "Tiramisu",
+        "Chocolate Mousse",
+        "Brownie with Ice Cream"
+      ],
+      "top_values": {
+        "Hefeweizen": 1,
+        "Cheesecake": 1,
+        "Cosmopolitan": 1,
+        "Margarita": 1,
+        "Mojito": 1
+      },
+      "semantic_context": "Column 'item_name' from table 'menu_items' in database 'tars_ibc'. Data type is STRING. It has moderate cardinality with 78 unique values. This column has no null values. Sample values include: \"Hefeweizen\", \"Cheesecake\", \"Cosmopolitan\", \"Margarita\", \"Mojito\". This appears to be a name field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "menu_items",
+      "column_name": "category",
+      "data_type": "STRING",
+      "total_count": 78,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "example_values": [
+        "Food",
+        "Cocktails",
+        "Beer",
+        "Mocktails"
+      ],
+      "top_values": {
+        "Food": 41,
+        "Cocktails": 15,
+        "Beer": 12,
+        "Mocktails": 10
+      },
+      "semantic_context": "Column 'category' from table 'menu_items' in database 'tars_ibc'. Data type is STRING. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample values include: \"Food\", \"Cocktails\", \"Beer\", \"Mocktails\". The most common values are: Food, Cocktails, Beer. This appears to be a categorical classification field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "menu_items",
+      "column_name": "subcategory",
+      "data_type": "STRING",
+      "total_count": 78,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 27,
+      "example_values": [
+        "Starters",
+        "Classic",
+        "Mains",
+        "Burgers",
+        "Pizza",
+        "Desserts",
+        "Pasta",
+        "Tropical",
+        "Wheat",
+        "Lager"
+      ],
+      "top_values": {
+        "Starters": 12,
+        "Classic": 8,
+        "Mains": 8,
+        "Burgers": 6,
+        "Pizza": 6
+      },
+      "semantic_context": "Column 'subcategory' from table 'menu_items' in database 'tars_ibc'. Data type is STRING. It has moderate cardinality with 27 unique values. This column has no null values. Sample values include: \"Starters\", \"Classic\", \"Mains\", \"Burgers\", \"Pizza\". The most common values are: Starters, Classic, Mains. This appears to be a categorical classification field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "menu_items",
+      "column_name": "base_price",
+      "data_type": "NUMERIC",
+      "total_count": 78,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 24,
+      "min_value": "125.0",
+      "max_value": "895.0",
+      "avg_value": 400.5,
+      "std_dev": 136.7280693020454,
+      "example_values": [
+        "125.0",
+        "325.0",
+        "395.0",
+        "490.0",
+        "895.0"
+      ],
+      "semantic_context": "Column 'base_price' from table 'menu_items' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 24 unique values. This column has no null values. Sample numeric values include: 125.0, 325.0, 395.0, 490.0, 895.0. Values range from 125.0 to 895.0. The average value is 400.50. This appears to be a monetary field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "menu_items",
+      "column_name": "cost_price",
+      "data_type": "NUMERIC",
+      "total_count": 78,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 36,
+      "min_value": "25.0",
+      "max_value": "380.0",
+      "avg_value": 120.11538461538461,
+      "std_dev": 60.16599997047794,
+      "example_values": [
+        "25.0",
+        "81.25",
+        "110.0",
+        "143.75",
+        "380.0"
+      ],
+      "semantic_context": "Column 'cost_price' from table 'menu_items' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 36 unique values. This column has no null values. Sample numeric values include: 25.0, 81.25, 110.0, 143.75, 380.0. Values range from 25.0 to 380.0. The average value is 120.12. This appears to be a monetary field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "menu_items",
+      "column_name": "is_beer",
+      "data_type": "NUMERIC",
+      "total_count": 78,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "min_value": "0",
+      "max_value": "1",
+      "avg_value": 0.15384615384615385,
+      "std_dev": 0.3631365196012813,
+      "example_values": [
+        "0.0",
+        "1.0"
+      ],
+      "semantic_context": "Column 'is_beer' from table 'menu_items' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample numeric values include: 0.0, 1.0. Values range from 0 to 1. The average value is 0.15.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "menu_items",
+      "column_name": "is_vegetarian",
+      "data_type": "NUMERIC",
+      "total_count": 78,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "min_value": "0",
+      "max_value": "1",
+      "avg_value": 0.7435897435897436,
+      "std_dev": 0.4394771815921655,
+      "example_values": [
+        "0.0",
+        "0.25",
+        "1.0"
+      ],
+      "semantic_context": "Column 'is_vegetarian' from table 'menu_items' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample numeric values include: 0.0, 0.25, 1.0. Values range from 0 to 1. The average value is 0.74.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "menu_items",
+      "column_name": "popularity_score",
+      "data_type": "NUMERIC",
+      "total_count": 78,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 12,
+      "min_value": "0.35",
+      "max_value": "0.95",
+      "avg_value": 0.6730769230769231,
+      "std_dev": 0.13404116146554748,
+      "example_values": [
+        "0.35",
+        "0.6",
+        "0.65",
+        "0.75",
+        "0.95"
+      ],
+      "semantic_context": "Column 'popularity_score' from table 'menu_items' in database 'tars_ibc'. Data type is NUMERIC. It has moderate cardinality with 12 unique values. This column has no null values. Sample numeric values include: 0.35, 0.6, 0.65, 0.75, 0.95. Values range from 0.35 to 0.95. The average value is 0.67. This appears to be a score or rating field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "outlets",
+      "column_name": "outlet_name",
+      "data_type": "STRING",
+      "total_count": 4,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "example_values": [
+        "IBC Powai",
+        "IBC Versova",
+        "IBC Kalyani Nagar",
+        "IBC Balewadi"
+      ],
+      "top_values": {
+        "IBC Powai": 1,
+        "IBC Versova": 1,
+        "IBC Kalyani Nagar": 1,
+        "IBC Balewadi": 1
+      },
+      "semantic_context": "Column 'outlet_name' from table 'outlets' in database 'tars_ibc'. Data type is STRING. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample values include: \"IBC Powai\", \"IBC Versova\", \"IBC Kalyani Nagar\", \"IBC Balewadi\". The most common values are: IBC Powai, IBC Versova, IBC Kalyani Nagar. This appears to be a name field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "outlets",
+      "column_name": "city",
+      "data_type": "STRING",
+      "total_count": 4,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "example_values": [
+        "Mumbai",
+        "Pune"
+      ],
+      "top_values": {
+        "Mumbai": 2,
+        "Pune": 2
+      },
+      "semantic_context": "Column 'city' from table 'outlets' in database 'tars_ibc'. Data type is STRING. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample values include: \"Mumbai\", \"Pune\". The most common values are: Mumbai, Pune. This appears to be a geographic location field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "outlets",
+      "column_name": "area",
+      "data_type": "STRING",
+      "total_count": 4,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "example_values": [
+        "Powai",
+        "Versova",
+        "Kalyani Nagar",
+        "Balewadi"
+      ],
+      "top_values": {
+        "Powai": 1,
+        "Versova": 1,
+        "Kalyani Nagar": 1,
+        "Balewadi": 1
+      },
+      "semantic_context": "Column 'area' from table 'outlets' in database 'tars_ibc'. Data type is STRING. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample values include: \"Powai\", \"Versova\", \"Kalyani Nagar\", \"Balewadi\". The most common values are: Powai, Versova, Kalyani Nagar.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "outlets",
+      "column_name": "seating_capacity",
+      "data_type": "NUMERIC",
+      "total_count": 4,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 4,
+      "min_value": "100",
+      "max_value": "150",
+      "avg_value": 125.0,
+      "std_dev": 20.816659994661325,
+      "example_values": [
+        "100.0",
+        "115.0",
+        "125.0",
+        "135.0",
+        "150.0"
+      ],
+      "semantic_context": "Column 'seating_capacity' from table 'outlets' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 4 unique values. This column has no null values. Sample numeric values include: 100.0, 115.0, 125.0, 135.0, 150.0. Values range from 100 to 150. The average value is 125.00.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "outlets",
+      "column_name": "has_outdoor",
+      "data_type": "NUMERIC",
+      "total_count": 4,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 2,
+      "min_value": "0",
+      "max_value": "1",
+      "avg_value": 0.75,
+      "std_dev": 0.5,
+      "example_values": [
+        "0.0",
+        "0.75",
+        "1.0"
+      ],
+      "semantic_context": "Column 'has_outdoor' from table 'outlets' in database 'tars_ibc'. Data type is NUMERIC. It is a low-cardinality categorical field with 2 unique values. This column has no null values. Sample numeric values include: 0.0, 0.75, 1.0. Values range from 0 to 1. The average value is 0.75.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "tenants",
+      "column_name": "business_name",
+      "data_type": "STRING",
+      "total_count": 1,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "Independence Brewing Company"
+      ],
+      "top_values": {
+        "Independence Brewing Company": 1
+      },
+      "semantic_context": "Column 'business_name' from table 'tenants' in database 'tars_ibc'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"Independence Brewing Company\". The most common values are: Independence Brewing Company. This appears to be a name field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "tenants",
+      "column_name": "business_type",
+      "data_type": "STRING",
+      "total_count": 1,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "brewery"
+      ],
+      "top_values": {
+        "brewery": 1
+      },
+      "semantic_context": "Column 'business_type' from table 'tenants' in database 'tars_ibc'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"brewery\". The most common values are: brewery. This appears to be a categorical classification field.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "tenants",
+      "column_name": "subscription_tier",
+      "data_type": "STRING",
+      "total_count": 1,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "demo"
+      ],
+      "top_values": {
+        "demo": 1
+      },
+      "semantic_context": "Column 'subscription_tier' from table 'tenants' in database 'tars_ibc'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"demo\". The most common values are: demo.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "tenants",
+      "column_name": "is_active",
+      "data_type": "NUMERIC",
+      "total_count": 1,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "min_value": "1",
+      "max_value": "1",
+      "avg_value": 1.0,
+      "std_dev": 0,
+      "example_values": [
+        "1.0"
+      ],
+      "semantic_context": "Column 'is_active' from table 'tenants' in database 'tars_ibc'. Data type is NUMERIC. It contains a single constant value. This column has no null values. Sample numeric values include: 1.0. Values range from 1 to 1. The average value is 1.00.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "users",
+      "column_name": "user_id",
+      "data_type": "NUMERIC",
+      "total_count": 1,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "min_value": "1",
+      "max_value": "1",
+      "avg_value": 1.0,
+      "std_dev": 0,
+      "example_values": [
+        "1.0"
+      ],
+      "semantic_context": "Column 'user_id' from table 'users' in database 'tars_ibc'. Data type is NUMERIC. It contains a single constant value. This column has no null values. Sample numeric values include: 1.0. Values range from 1 to 1. The average value is 1.00.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "users",
+      "column_name": "role",
+      "data_type": "STRING",
+      "total_count": 1,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "example_values": [
+        "owner"
+      ],
+      "top_values": {
+        "owner": 1
+      },
+      "semantic_context": "Column 'role' from table 'users' in database 'tars_ibc'. Data type is STRING. It contains a single constant value. This column has no null values. Sample values include: \"owner\". The most common values are: owner.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    },
+    {
+      "database_id": "tars_ibc",
+      "table_name": "users",
+      "column_name": "is_active",
+      "data_type": "NUMERIC",
+      "total_count": 1,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "distinct_count": 1,
+      "min_value": "1",
+      "max_value": "1",
+      "avg_value": 1.0,
+      "std_dev": 0,
+      "example_values": [
+        "1.0"
+      ],
+      "semantic_context": "Column 'is_active' from table 'users' in database 'tars_ibc'. Data type is NUMERIC. It contains a single constant value. This column has no null values. Sample numeric values include: 1.0. Values range from 1 to 1. The average value is 1.00.",
+      "is_selected": true,
+      "selection_reason": "AI selected as valuable"
+    }
+  ],
+  "cost_savings": {
+    "total_cost": 0.0495,
+    "reduced_cost": 0.0305,
+    "savings": 0.019000000000000003,
+    "reduction_percentage": 38.38383838383839
+  }
+}

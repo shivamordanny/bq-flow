@@ -64,6 +64,40 @@ API_BASE = backend_config['api_base']
 httpx_client = httpx.AsyncClient(timeout=120.0)
 
 
+# Load databases.yaml for example queries
+def load_databases_config() -> Dict[str, Any]:
+    """Load databases.yaml and return flattened database config"""
+    databases_file = project_root / 'config' / 'databases.yaml'
+    if not databases_file.exists():
+        logger.warning(f'databases.yaml not found at {databases_file}')
+        return {}
+
+    try:
+        with open(databases_file, 'r') as f:
+            db_config = yaml.safe_load(f)
+
+        # Flatten bq_public and custom into single dict
+        all_dbs = {}
+        if 'bq_public' in db_config:
+            all_dbs.update(db_config['bq_public'])
+        if 'custom' in db_config:
+            all_dbs.update(db_config['custom'])
+
+        logger.info(f'Loaded {len(all_dbs)} database configs from databases.yaml')
+        return all_dbs
+    except Exception as e:
+        logger.error(f'Error loading databases.yaml: {e}')
+        return {}
+
+
+def get_example_queries(database_id: str) -> List[str]:
+    """Get example queries for a database from databases.yaml"""
+    db_configs = load_databases_config()
+    if database_id in db_configs:
+        return db_configs[database_id].get('example_queries', ['Ask any question about the data!'])
+    return ['Ask any question about the data!']
+
+
 class StreamingQueryHandler:
     """Handles queries with WebSocket streaming or REST fallback"""
 
@@ -1382,16 +1416,25 @@ async def main(message: cl.Message):
         extra={'extra_fields': {'input_length': len(user_input), 'database_id': selected_database}},
     )
 
-    # Check if user is selecting a database
-    if user_input.lower() in ['google_trends', 'thelook_ecommerce', 'stackoverflow', 'hackernews']:
+    # Check if user is selecting a database (dynamically from onboarded databases via API)
+    databases = cl.user_session.get('databases', [])
+    available_db_ids = [db['database_id'] for db in databases] if databases else []
+
+    if user_input.lower() in available_db_ids:
         await select_database(user_input.lower())
         return
 
     # Check if database is selected
     if not selected_database:
-        await cl.Message(
-            content='⚠️ Please select a pre-embedded dataset first by typing: **google_trends**, **thelook_ecommerce**, **stackoverflow** or **hackernews**\n\n💡 **Note**: Datasets must be onboarded first using the BQ Flow Data Onboarding tool (port 8501)',
-        ).send()
+        if available_db_ids:
+            db_list = ', '.join(f'**{db}**' for db in sorted(available_db_ids))
+            await cl.Message(
+                content=f'⚠️ Please select a dataset first by typing one of: {db_list}',
+            ).send()
+        else:
+            await cl.Message(
+                content='⚠️ No onboarded databases found.\n\n💡 Run BQ Flow Data Onboarding first (port 8501) to prepare datasets for querying.',
+            ).send()
         logger.warning('No database selected for query', extra={'extra_fields': {'user_input': user_input[:100]}})
         return
 
@@ -1423,23 +1466,8 @@ async def select_database(database_id: str):
         extra={'extra_fields': {'database_id': database_id, 'display_name': selected_db['display_name']}},
     )
 
-    # Example queries for each database
-    examples = {
-        'thelook_ecommerce': [
-            'What is the average order value by month?',
-            'List top 5 customers by total spend',
-            'Which products have the highest profit margin?',
-            'Find customers who spent over $500',
-        ],
-        'stackoverflow': [
-            'What are the highest scored Python questions?',
-            'Show posts with most views this year',
-            'Find unanswered questions about machine learning',
-            'Top contributors by reputation',
-        ],
-    }
-
-    example_queries = examples.get(database_id, ['Ask any question about the data!'])
+    # Get example queries dynamically from databases.yaml
+    example_queries = get_example_queries(database_id)
     examples_formatted = '\n'.join(f'• {q}' for q in example_queries)
 
     await cl.Message(

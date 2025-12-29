@@ -18,6 +18,11 @@ bq_public:
       - "User demographics and behavior"
       - "Product catalog and inventory"
       - "Order history and analytics"
+    example_queries:
+      - "What is the average order value by month?"
+      - "List top 5 customers by total spend"
+      - "Which products have the highest profit margin?"
+      - "Find customers who spent over $500"
 
   # News & Social Media
   hackernews:
@@ -47,6 +52,11 @@ bq_public:
       - "Questions and answers"
       - "Tags and categories"
       - "User reputation system"
+    example_queries:
+      - "What are the highest scored Python questions?"
+      - "Show posts with most views this year"
+      - "Find unanswered questions about machine learning"
+      - "Top contributors by reputation"
 
   # Blockchain & Cryptocurrency
   crypto_ethereum:
@@ -181,7 +191,39 @@ bq_public:
       - "Time series analysis"
 
 # Custom Databases (User-defined)
-custom: {}  # Empty dictionary for user-defined databases
+custom:
+  # TARS Demo - Independence Brewing Company
+  tars_ibc:
+    display_name: "IBC Analytics"
+    project_id: bqaihack
+    dataset_name: ibc_analytics
+    description: "Independence Brewing Company - 4 outlets, craft brewery F&B data (6 months demo)"
+    category: "F&B / Hospitality"
+    sample_size: 1000
+    profiling_strategy: fnb
+    complexity: simple
+    highlights:
+      - "Daily & hourly sales data"
+      - "Menu items with costs & margins"
+      - "Aggregator performance (Swiggy/Zomato)"
+      - "Outlet comparison analytics"
+      - "Beer production & keg tracking"
+    example_queries:
+      - "What was total revenue last week?"
+      - "Which outlet has the highest revenue?"
+      - "Compare Swiggy vs Zomato performance"
+      - "What are the top selling menu items?"
+      - "Show daily sales trend for December"
+    tables:
+      - outlets
+      - menu_items
+      - daily_sales
+      - hourly_sales
+      - aggregator_daily
+      - events
+      - beer_batches
+      - kegs
+
   # Example custom database template:
   # my_custom_db:
   #   display_name: "My Custom Database"
@@ -274,3 +316,20 @@ profiling_strategies:
     exclude_patterns:
       - "*_internal"
       - "*_tmp"
+
+  fnb:
+    focus_columns:
+      - "*_revenue"
+      - "*_sales"
+      - "*_price"
+      - "*_cost"
+      - "*_quantity"
+      - "*_date"
+      - "*_outlet"
+      - "*_category"
+      - "*_order"
+      - "*_commission"
+    exclude_patterns:
+      - "*_id"
+      - "tenant_*"
+      - "*_created_at"
